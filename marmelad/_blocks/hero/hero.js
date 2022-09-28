@@ -9,10 +9,10 @@ function initHeroSlider () {
     watchSlidesProgress: true
   });
   const heroSliderName = new Swiper(".js-hero-slider-name", {
+    slidesPerView: 'auto',
     loop: true,
     speed: 800,
     spaceBetween: 65,
-    slidesPerView: 'auto',
     mousewheel: true,
     // slideToClickedSlide: true,
     autoplay: {
@@ -28,6 +28,17 @@ function initHeroSlider () {
     },
     thumbs: {
       swiper: heroSlider
+    },
+    breakpoints: {
+      320: {
+        centeredSlides: true,
+        spaceBetween: 35
+      },
+
+      768: {
+        centeredSlides: false,
+        spaceBetween: 65
+      },
     }
   });
 }
