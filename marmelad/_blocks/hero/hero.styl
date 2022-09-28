@@ -1,0 +1,185 @@
+.hero
+  width: 100%
+  height: 100%
+  color: #fff
+  padding-top: 40px
+  position: relative
+  z-index: 10
+
+  &__section
+    width: 100%
+    height: 100%
+    overflow: hidden
+
+  &__inner
+    max-width: 1320px
+    width: 100%
+    min-height: 750px
+    margin-left: auto
+    margin-right: auto
+    position: relative
+    border-bottom: 2px solid #FFFFFF
+
+  &__title
+    font-size: 128px
+    color: #FFF
+    font-weight: 600
+    line-height: 0.8
+    letter-spacing: -0.64px
+    max-width: 540px
+    width: 100%
+    position: absolute
+    top: 0
+    left: 0
+
+  &__wrapper
+    .swiper-pagination
+      bottom: 60px
+      width: 100%
+      display: flex
+      justify-content: center
+      align-items: center
+      padding-right: 15px
+      padding-left: 15px
+
+    .swiper-pagination-bullet
+      background-color: transparent
+      border-radius: 4px
+      flex: 0 0 48px
+      width: 48px
+      max-width: 48px
+      margin-right: 4px
+      overflow: hidden
+      opacity: 1
+      padding-top: 15px
+      padding-bottom: 15px
+      position: relative
+
+      &:after
+        content: ''
+        position: absolute
+        top: 50%
+        left: 0
+        transform: translateY(-50%)
+        width: 100%
+        height: 3px
+        background-color: rgba(255, 255, 255, 0.5)
+
+      &:last-child
+        margin-right: 0
+
+      span
+        position: absolute
+        top: 50%
+        left: 0
+        transform: translateY(-50%)
+        display: block
+        width: 0
+        height: 3px
+        background-color: #fff
+
+      &.swiper-pagination-bullet-active
+        span
+          animation-name: paginationProgressBar
+          animation-duration: 5s
+          animation-timing-function: ease-in
+          animation-iteration-count: 1
+          animation-direction: alternate
+          animation-fill-mode: forwards
+
+  &__item
+    &.swiper-slide-active
+      & ^[0]
+        &__info
+          transform: translateY(0)
+          opacity: 1
+          visibility: visible
+
+  &__body
+    display: flex
+
+  &__info
+    max-width: 480px
+    width: 100%
+    align-self: flex-end
+    padding-bottom: 60px
+    transform: translateY(50px)
+    opacity: 0
+    visibility: hidden
+    transition: opacity 0.5s, transform 0.5s
+
+  &__text
+    font-size: 24px
+    color: #FFFFFF
+    font-weight: 400
+    line-height: 1.1
+    letter-spacing: 0.16px
+    margin-bottom: 25px
+
+  &__more
+    font-size: 14px
+    color: #A39061
+    font-weight: 600
+    line-height: 1.1
+    letter-spacing: 1.6px
+    text-transform: uppercase
+    text-decoration: none
+    padding: 5px 0 6px 0
+    border-bottom: 3px solid #A39061
+    transition: border-color 0.3s
+
+    &:hover
+      border-bottom-color: transparent
+
+  &__img
+    margin-left: auto
+    clip-path: polygon(0% 0%, 34% 0px, 40% 6%, 60% 6%, 66% 0px, 100% 0%, 100% 34%, 94% 40%, 94% 60%, 100% 66%, 100% 100%, 66% 100%, 62% 94%, 40% 94%, 34% 100%, 0px 100%, 0px 67%, 7% 60%, 7% 40%, 0px 34%)
+    width: 610px
+    height: 610px
+
+    img
+      width: 100%
+      height: 100%
+      object-fit: cover
+      vertical-align: top
+
+  &__slider-name
+    overflow: visible
+    margin-top: -24%
+
+  &__item-name
+    width: auto
+    min-width: 150px
+
+    &.swiper-slide-active
+      & ^[0]
+        &__name
+          color: #fff
+
+  &__name
+    font-size: 48px
+    color: #A39061
+    font-weight: 600
+    line-height: 1.1
+    letter-spacing: 0.16px
+    display: flex
+    align-items: center
+    transition: color 0.3s
+    cursor: default
+    user-select: none
+
+    &:after
+      content: ''
+      flex: 0 0 64px
+      width: 64px
+      max-width: 64px
+      height: 2px
+      background-color: #A39061
+      margin-left: 65px
+
+@keyframes paginationProgressBar
+  0%
+    width: 0
+
+  100%
+    width: 100%
