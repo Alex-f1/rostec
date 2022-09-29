@@ -1,0 +1,83 @@
+.direction-activity
+  &__head
+    max-width: 1320px + 25px + 25px
+    width: 100%
+    padding-right: 25px
+    padding-left: 25px
+    margin-right: auto
+    margin-left: auto
+
+  &__title
+    font-size: 128px
+    color: #101820
+    font-weight: 600
+    line-height: 0.8
+    letter-spacing: -0.64
+    margin-top: 0
+    margin-bottom: 90px
+
+    @media (max-width: 1279px)
+      font-size: 80px
+      margin-bottom: 15px
+
+    @media (max-width: 767px)
+      font-size: 52px
+      margin-bottom: 50px
+
+    @media (max-width: 374px)
+      font-size: 42px
+
+  &__direction
+    padding-top: 95px
+    background-color: #F5F8FA
+    overflow: hidden
+
+    @media (max-width: 1279px)
+      padding-top: 30px
+
+    @media (max-width: 767px)
+      padding-top: 25px
+
+    &--transport
+      .direction-block
+        &__img
+          @media (max-width: 1279px)
+            width: 773px
+            right: -200px
+
+          @media (max-width: 767px)
+            width: 558px
+            transform: translateX(0)
+
+          @media (max-width: 479px)
+            width: 558px
+            transform: translateX(-50px)
+
+          @media (max-width: 374px)
+            width: 485px
+
+  &__container
+    min-height: 760px
+    position: relative
+
+    @media (max-width: 1279px)
+      min-height: 600px
+
+  &__more
+    font-size: 20px
+    color: #A39061
+    font-weight: 600
+    line-height: 1.1
+    letter-spacing: 0.01em
+    text-align: center
+    text-decoration: none
+    width: 100%
+    margin-top: 30px
+    padding: 27px 20px
+    display: block
+    background-color: #fff
+    transition: color 0.3s, background-color 0.3s
+
+    &:hover
+      color: #fff
+      background-color: #A39061

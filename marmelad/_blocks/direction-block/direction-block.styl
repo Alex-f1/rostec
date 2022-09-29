@@ -1,0 +1,136 @@
+.direction-block
+  &__body
+    display: flex
+    flex-direction: column
+
+  &__head
+    display: flex
+    align-items: center
+    margin-bottom: 50px
+    position: relative
+    z-index: 2
+
+    @media (max-width: 767px)
+      order: -2
+      margin-bottom: 20px
+
+    h3
+      font-size: 48px
+      color: #101820
+      font-weight: 600
+      line-height: 1.1
+      letter-spacing: 0.16px
+      margin-top: 0
+      margin-bottom: 0
+
+      @media (max-width: 767px)
+        font-size: 32px
+
+  &__other
+    flex: 0 0 20px
+    max-width: 20px
+    width: 20px
+    height: 30px
+    background-image: url("data:image/svg+xml,%3Csvg width='20' height='30' viewBox='0 0 20 30' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M1.95703 12L10.4053 3L18.8535 12' stroke='%23101820' stroke-width='3'/%3E%3Cpath d='M1.95703 19L10.4053 27L18.8535 19' stroke='%23101820' stroke-width='3'/%3E%3C/svg%3E%0A")
+    background-repeat: no-repeat
+    background-position: 0 0
+    background-size: contain
+    margin-right: 30px
+    margin-left: -50px
+    transition: background 0.3s
+
+    @media (max-width: 1599px)
+      margin-left: 0
+
+    @media (max-width: 767px)
+      flex: 16px
+      max-width: 16px
+      width: 16px
+      height: 22px
+      margin-right: 12px
+
+    &:hover
+      background-image: url("data:image/svg+xml,%3Csvg width='20' height='30' viewBox='0 0 21 30' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M2 12L10.5 3L19 12' stroke='%23A39061' stroke-width='3'/%3E%3Cpath d='M2 19L10.5 27L19 19' stroke='%23A39061' stroke-width='3'/%3E%3C/svg%3E%0A")
+
+  &__desc
+    font-size: 32px
+    color: #101820
+    font-weight: 400
+    line-height: 1.2
+    letter-spacing: 0.16px
+    max-width: 470px
+    margin-bottom: 46px
+    position: relative
+    z-index: 2
+
+    @media (max-width: 1279px)
+      font-size: 24px
+
+  &__links
+    display: flex
+    flex-direction: column
+    position: relative
+    z-index: 2
+
+    @media (max-width: 1023px)
+      order: -1
+      flex-direction: row
+      overflow: auto
+      padding-bottom: 10px
+      border-bottom: 2px solid #101820
+      padding-left: 25px
+      padding-right: 25px
+      margin-left: -25px
+      margin-right: -25px
+      margin-bottom: 20px
+
+    a
+      font-size: 14px
+      color: #A39061
+      font-weight: 600
+      line-height: 1.1
+      letter-spacing: 0.16px
+      text-transform: uppercase
+      text-decoration: none
+      margin-bottom: 42px
+      padding-bottom: 2px
+      border-bottom: 2px solid transparent
+      transition: border-color 0.3s
+      align-self: flex-start
+
+      @media (max-width: 1023px)
+        margin-right: 25px
+        margin-bottom: 0
+        flex: 0 0 auto
+
+      &:hover
+        border-bottom-color: #A39061
+
+  &__img
+    position: absolute
+    top: 25px
+    right: -460px
+
+    @media (max-width: 1279px)
+      width: 1370px
+      top: 75px
+      right: -330px
+
+    @media (max-width: 1023px)
+      width: 1000px
+      position: static
+      margin-bottom: 30px
+
+    @media (max-width: 767px)
+      transform: translateX(-300px)
+
+    @media (max-width: 639px)
+      transform: translateX(-410px)
+
+    @media (max-width: 374px)
+      width: 870px
+      transform: translateX(-362px)
+
+    img
+      // max-width: none
+      vertical-align: top
