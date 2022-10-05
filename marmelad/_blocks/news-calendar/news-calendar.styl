@@ -1,0 +1,322 @@
+.news-calendar
+  color: #fff
+  padding-top: 110px
+  padding-bottom: 50px
+  padding-right: 45px
+  padding-left: 45px
+  position: absolute
+  top: -5px
+  left: 50%
+  transform: translateX(-50%)
+  max-width: 1410px
+  width: 100%
+  height: 910px
+  z-index: 4
+  background: linear-gradient(225.29deg, #101820 22.8%, #2C3642 99.5%)
+  display: none
+  opacity: 0
+  visibility: hidden
+  transform: translate(-50%, -50px)
+  user-select: none
+  transition: opacity 0.4s, transform 0.4s, ease 0.4s
+
+  @media (max-width: 959px)
+    padding-left: 25px
+    padding-right: 25px
+    height: auto
+
+  @media (max-width: 767px)
+    padding-top: 80px
+
+  &._is-show
+    opacity: 1
+    visibility: visible
+    transform: translate(-50%, 0)
+
+  &__button-close
+    width: 28px
+    height: 28px
+    position: absolute
+    top: 25px
+    right: 25px
+    background-color: transparent
+    padding: 0
+    border: none
+    background-image: url("data:image/svg+xml,%3Csvg width='28' height='28' viewBox='0 0 28 28' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Crect x='0.565186' y='26.0208' width='36' height='2' transform='rotate(-45 0.565186 26.0208)' fill='white'/%3E%3Crect x='26.0212' y='27.4348' width='36' height='2' transform='rotate(-135 26.0212 27.4348)' fill='white'/%3E%3C/svg%3E%0A")
+    background-repeat: no-repeat
+    background-position: 0 0
+    background-size: contain
+    display: block
+    cursor: pointer
+    transition: background 0.3s, ease 0.3s
+    z-index: 5
+
+    @media (max-width: 767px)
+      width: 22px
+      height: 22px
+      top: 15px
+      right: 15px
+
+    &:hover
+      background-image: url("data:image/svg+xml,%3Csvg width='28' height='28' viewBox='0 0 28 28' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Crect x='0.565186' y='26.0208' width='36' height='2' transform='rotate(-45 0.565186 26.0208)' fill='%23A39061'/%3E%3Crect x='26.0212' y='27.4348' width='36' height='2' transform='rotate(-135 26.0212 27.4348)' fill='%23A39061'/%3E%3C/svg%3E%0A")
+
+  &__container
+    padding-top: 15px
+
+  &__date-nav
+    display: flex
+    align-items: center
+    margin-bottom: 15px
+
+  &__years
+    flex: 0 0 90px
+    position: relative
+    margin-bottom: 15px
+
+  &__active-year
+    font-size: 14px
+    color: #A39061
+    font-weight: 600
+    line-height: 1
+    letter-spacing: 0.16px
+    text-transform: uppercase
+    padding: 8px 15px
+    border: 1px solid rgba(255, 255, 255, 0.1)
+    position: relative
+    cursor: pointer
+
+    &:after
+      content: ''
+      position: absolute
+      top: 10px
+      right: 10px
+      width: 14px
+      height: 10px
+      background-image: url("data:image/svg+xml,%3Csvg width='14' height='10' viewBox='0 0 14 10' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M1 1.63099L7 7.37012L13 1.63099' stroke='%23A39061' stroke-width='2.6087'/%3E%3C/svg%3E%0A")
+      background-repeat: no-repeat
+      background-position: 0 0
+      background-size: contain
+      transition: transform 0.3s, ease 0.3s
+
+    &._is-active
+      &:after
+        transform: rotate(180deg)
+
+  &__year-dropdown
+    opacity: 0
+    visibility: hidden
+    position: absolute
+    width: 100%
+    padding: 8px 15px
+    top: 100%
+    left: 0
+    transform: translateY(10px)
+    background: linear-gradient(225.29deg, #101820 22.8%, #2C3642 99.5%)
+    border: 1px solid rgba(255, 255, 255, 0.1)
+    border-top: 0
+    transition: opacity 0.3s, transform 0.3s, ease 0.3s
+    z-index: 5
+
+    &._is-show
+      opacity: 1
+      visibility: visible
+      transform: translateY(0)
+
+  &__year
+    font-size: 14px
+    color: #fff
+    font-weight: 600
+    line-height: 1
+    letter-spacing: 0.16px
+    text-transform: uppercase
+    padding-top: 5px
+    padding-bottom: 5px
+    cursor: pointer
+    transition: color 0.3s, ease 0.3s
+
+    &:hover
+      color: #8f8f8c
+
+    &._is-active
+      color: #A39061
+      pointer-events: none
+
+  &__months
+    display: flex
+    align-items: center
+    margin-left: 25px
+    overflow-x: auto
+    overflow-y: hidden
+    width: 100%
+    padding-bottom: 15px
+
+  &__month
+    font-size: 14px
+    color: #A39061
+    font-weight: 600
+    line-height: 1
+    letter-spacing: 1.6px
+    text-transform: uppercase
+    flex: 0 0 auto
+    margin-right: 25px
+    cursor: pointer
+    transition: color 0.3s
+
+    @media (max-width: 479px)
+      font-size: 12px
+      margin-right: 15px
+
+    &:hover
+      color: #8f8f8c
+
+    &._is-active
+      color: #FAFCFF
+      pointer-events: none
+
+  &__day-names
+    display: flex
+
+  &__day-name
+    font-size: 32px
+    color: #FFF
+    font-weight: 400
+    line-height: 1
+    letter-spacing: 0.16px
+    width: 14.28%
+    // flex: 0 0 188px
+    // width: 188px
+    // max-width: 188px
+    display: flex
+    align-items: center
+    justify-content: center
+    padding-left: 30px
+
+    @media (max-width: 959px)
+      font-size: 24px
+
+    @media (max-width: 767px)
+      font-size: 18px
+      padding-left: 15px
+
+  &__cells-days
+    display: flex
+    flex-wrap: wrap
+
+  &__cell-day
+    font-size: 32px
+    color: #A39061
+    font-weight: 400
+    line-height: 1
+    letter-spacing: 0.16px
+    width: 14.28%
+    // flex: 0 0 188px
+    // width: 188px
+    // max-width: 188px
+    height: 128px
+    display: flex
+    align-items: center
+    justify-content: center
+    cursor: pointer
+    padding-left: 30px
+    position: relative
+
+    @media (max-width: 959px)
+      font-size: 24px
+      height: 86px
+
+    @media (max-width: 767px)
+      font-size: 18px
+      height: 64px
+      padding-left: 15px
+
+    @media (max-width: 479px)
+      height: 36px
+
+    &:after
+      content: ''
+      width: 128px
+      height: 128px
+      position: absolute
+      top: 0
+      left: 50%
+      transform: translateX(-50%)
+      // border: 1px solid rgba(255, 255, 255, 0.2)
+      opacity: 0
+      visibility: hidden
+      margin-left: 15px
+      background-image: url("data:image/svg+xml,%3Csvg width='130' height='130' viewBox='0 0 130 130' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath opacity='0.2' d='M1 44.2396V1.00098H43.8954L51.1877 8.2932H78.555L85.8472 1.00098H129V44.2396L120.936 52.3039V78.2128L129 86.2771V129.001H85.8472L78.555 121.709H51.1877L43.8954 129.001H1V86.2771L9.06434 78.2128V52.3039L1 44.2396Z' stroke='white'/%3E%3C/svg%3E%0A")
+      background-repeat: no-repeat
+      background-position: 0 0
+      background-size: contain
+      // clip-path: polygon(0 0, 24% 0, 38% 11%, 64% 11%, 79% 0, 100% 0, 100% 29%, 89% 43%, 90% 69%, 100% 80%, 100% 100%, 80% 100%, 65% 88%, 43% 88%, 27% 100%, 0 100%, 1% 80%, 13% 66%, 13% 45%, 0 27%)
+      transition: opacity 0.3s, background 0.3s, ease 0.3s
+
+      @media (max-width: 959px)
+        width: 86px
+        height: 86px
+
+      @media (max-width: 767px)
+        width: 64px
+        height: 64px
+        margin-left: 8px
+
+      @media (max-width: 479px)
+        width: 36px
+        height: 36px
+
+    &:hover
+      &:after
+        opacity: 1
+        visibility: visible
+        background-image: url("data:image/svg+xml,%3Csvg width='130' height='130' viewBox='0 0 130 130' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath opacity='0.2' d='M1 44.2396V1.00098H43.8954L51.1877 8.2932H78.555L85.8472 1.00098H129V44.2396L120.936 52.3039V78.2128L129 86.2771V129.001H85.8472L78.555 121.709H51.1877L43.8954 129.001H1V86.2771L9.06434 78.2128V52.3039L1 44.2396Z' stroke='%23A39061'/%3E%3C/svg%3E%0A")
+
+    &._is-active
+      pointer-events: none
+      color: #fff
+
+      &:after
+        opacity: 1
+        visibility: visible
+
+      span
+        &:after
+          background-color: #fff
+
+    span
+      position: relative
+
+      &:after
+        content: ''
+        width: 8px
+        height: 8px
+        background-color: #A39061
+        border-radius: 50%
+        position: absolute
+        top: -10px
+        right: -15px
+
+        @media (max-width: 767px)
+          width: 4px
+          height: 4px
+          top: -5px
+          right: -10px
+
+        @media (max-width: 479px)
+          top: 0
+          right: -5px
+
+    &--no-news
+      color: rgba(255, 255, 255, 0.2)
+      pointer-events: none
+
+      span
+        &:after
+          display: none
+
+    &--dey-another-month
+      color: rgba(255, 255, 255, 0.05)
+      pointer-events: none
+
+      span
+        &:after
+          display: none

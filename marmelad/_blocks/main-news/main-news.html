@@ -5,10 +5,11 @@
         <div elem="title">
           <h2>Ростех сегодня</h2>
           <div elem="current-date">12.06<small>ПН</small></div>
-          <a elem="other-date" href="#"></a>
+          <a elem="other-date" class="js-choose-date" href="#"></a>
         </div>
         <a elem="all" href="#">Все медиа</a>
       </div>
+      {% include "news-calendar.html" %}
       <div elem="slider" class="swiper js-main-news-slider">
         <div elem="items" class="swiper-wrapper">
           <div elem="item" class="swiper-slide">
