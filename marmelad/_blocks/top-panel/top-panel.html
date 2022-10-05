@@ -4,13 +4,19 @@
       {% include "logo.html" %}
       {% include "main-menu.html" %}
       <div elem="controls">
-        <button elem="button-language" class="js-button-language"  type="button">
-          <svg width="36" height="36" viewBox="0 0 36 36" fill="none" xmlns="http://www.w3.org/2000/svg">
-            <circle cx="18" cy="18" r="16" stroke="white" stroke-width="3" />
-            <ellipse cx="18" cy="18" rx="8" ry="16" stroke="white" stroke-width="3" />
-            <path d="M2 18H34M18 34V2" stroke="white" stroke-width="3" />
-          </svg>
-        </button>
+        <div elem="language">
+          <button elem="button-language" class="js-button-language"  type="button">
+            <svg width="36" height="36" viewBox="0 0 36 36" fill="none" xmlns="http://www.w3.org/2000/svg">
+              <circle cx="18" cy="18" r="16" stroke="white" stroke-width="3" />
+              <ellipse cx="18" cy="18" rx="8" ry="16" stroke="white" stroke-width="3" />
+              <path d="M2 18H34M18 34V2" stroke="white" stroke-width="3" />
+            </svg>
+          </button>
+          <div elem="language-selection" class="js-language-selection">
+            <a href="#" class="_is-active">Русский</a>
+            <a href="#">English</a>
+          </div>
+        </div>
         <button elem="button-search" class="js-button-search"  type="button">
           <svg width="36" height="36" viewBox="0 0 36 36" fill="none" xmlns="http://www.w3.org/2000/svg">
             <circle cx="15.3333" cy="15.3333" r="13.3333" stroke="white" stroke-width="3" />
@@ -18,8 +24,9 @@
           </svg>
         </button>
         <button elem="button-burger" class="js-button-burger" type="button"></button>
-        {% include "full-menu.html" %}
       </div>
     </div>
   </div>
+  {% include "full-menu.html" %}
+  {% include "search-panel.html" %}
 </div><!-- top-panel -->
