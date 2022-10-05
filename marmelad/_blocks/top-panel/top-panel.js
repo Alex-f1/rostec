@@ -19,5 +19,5 @@ $('.js-button-close').on('click', function (event) {
   $('.top-panel .search-panel').removeClass('_is-show');
 });
 
-$('.full-menu').show();
+$('.full-menu').css('display', 'flex');
 $('.top-panel .search-panel').show();
