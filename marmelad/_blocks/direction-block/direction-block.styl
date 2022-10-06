@@ -1,4 +1,13 @@
 .direction-block
+  position: relative
+  min-height: 800px
+  padding-top: 100px
+  overflow: hidden
+
+  @media (max-width: 1023px)
+    min-height: auto
+    padding-top: 20px
+
   &__body
     display: flex
     flex-direction: column
@@ -106,31 +115,24 @@
       &:hover
         border-bottom-color: #A39061
 
-  &__img
-    position: absolute
-    top: 25px
-    right: -460px
+  &__img-mobile
+    margin-top: -70px
+    margin-left: -520px
+    margin-right: -30px
 
-    @media (max-width: 1279px)
-      width: 1370px
-      top: 75px
-      right: -330px
-
-    @media (max-width: 1023px)
-      width: 1000px
-      position: static
-      margin-bottom: 30px
-
-    @media (max-width: 767px)
-      transform: translateX(-300px)
+    @media (min-width: 1024px)
+      display: none
 
     @media (max-width: 639px)
-      transform: translateX(-410px)
+      margin-left: -520px
+      margin-right: -100px
+
+    @media (max-width: 413px)
+      margin-left: -420px
+      margin-right: -80px
 
     @media (max-width: 374px)
-      width: 870px
-      transform: translateX(-362px)
+      margin-left: -390px
 
     img
-      // max-width: none
       vertical-align: top

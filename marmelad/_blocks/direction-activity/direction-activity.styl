@@ -27,22 +27,49 @@
     @media (max-width: 374px)
       font-size: 42px
 
-  &__direction
-    padding-top: 95px
+  &__inner
     background-color: #F5F8FA
-    overflow: hidden
-   
-    @media (max-width: 1279px)
-      padding-top: 30px
+    padding-top: 70px
 
     @media (max-width: 767px)
-      padding-top: 25px
+      padding-top 20px
 
-     
+  &__direction-head
+    width: 100%
+    // margin-bottom: 50px
+    position: sticky
+    top: 0
+    z-index: 5
+
+    @media (max-width: 1023px)
+      order: -2
+      margin-bottom: 20px
+
+  &__direction
+    background-color: #F5F8FA
+    position: relative
+    // margin-top: 75px
+    background-repeat: no-repeat
+    background-position: 50% 0
+    background-size: contain
+    background-attachment: fixed
+
+    @media (max-width: 1279px)
+      padding-top: 15px
+
+    @media (max-width: 1023px)
+      background-image: none !important
+
+    @media (max-width: 767px)
+      padding-top: 5px
+
+    .news-block
+      background-color: #F5F8FA
+
     &:last-child
       & ^[0]
         &__more
-          margin-bottom 0 !important  
+          margin-bottom: 0 !important
 
     &--transport
       .direction-block
@@ -63,11 +90,8 @@
             width: 485px
 
   &__container
-    min-height: 760px
+    // min-height: 760px
     position: relative
-
-    @media (max-width: 1279px)
-      min-height: 600px
 
   &__more
     font-size: 20px
@@ -78,7 +102,7 @@
     text-align: center
     text-decoration: none
     width: 100%
-    margin-top: 30px
+    // margin-top: 30px
     padding: 27px 20px
     display: block
     background-color: #fff
@@ -97,3 +121,176 @@
     &:hover
       color: #fff
       background-color: #A39061
+
+.direction-name
+  padding-top: 25px
+  padding-bottom: 25px
+  width: 100%
+
+  &._is-fixed
+    background-color: #fff
+
+  &__section
+    display: flex
+    align-items: center
+
+  h3
+    font-size: 48px
+    color: #101820
+    font-weight: 600
+    line-height: 1.1
+    letter-spacing: 0.16px
+    margin-top: 0
+    margin-bottom: 0
+
+    @media (max-width: 767px)
+      font-size: 32px
+
+  &__other
+    flex: 0 0 20px
+    max-width: 20px
+    width: 20px
+    height: 30px
+    background-image: url("data:image/svg+xml,%3Csvg width='20' height='30' viewBox='0 0 20 30' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M1.95703 12L10.4053 3L18.8535 12' stroke='%23101820' stroke-width='3'/%3E%3Cpath d='M1.95703 19L10.4053 27L18.8535 19' stroke='%23101820' stroke-width='3'/%3E%3C/svg%3E%0A")
+    background-repeat: no-repeat
+    background-position: 0 0
+    background-size: contain
+    margin-right: 30px
+    margin-left: -50px
+    transition: background 0.3s
+
+    @media (max-width: 1599px)
+      margin-left: 0
+
+    @media (max-width: 767px)
+      flex: 16px
+      max-width: 16px
+      width: 16px
+      height: 22px
+      margin-right: 12px
+
+    &:hover
+      background-image: url("data:image/svg+xml,%3Csvg width='20' height='30' viewBox='0 0 21 30' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M2 12L10.5 3L19 12' stroke='%23A39061' stroke-width='3'/%3E%3Cpath d='M2 19L10.5 27L19 19' stroke='%23A39061' stroke-width='3'/%3E%3C/svg%3E%0A")
+
+  &__list
+    position: absolute
+    top: 130px
+    left: 0
+    width: 100%
+    background-color: #F0F4FA
+    opacity: 0
+    visibility: hidden
+    transform: translateY(-30px)
+    transition: opacity 0.3s, transform 0.3s, ease 0.3s
+
+    @media (max-width: 767px)
+      top: 115px
+
+    &._is-show
+      opacity: 1
+      visibility: visible
+      transition: translateY(0)
+
+    ul
+      list-style: none
+      margin: 0
+      padding-left: 0
+
+      li
+        &._is-active
+          a
+            pointer-events: none
+
+            span
+              &:before
+                opacity: 1
+                visibility: visible
+
+        a
+          font-size: 48px
+          color: #101820
+          font-weight: 600
+          line-height: 1
+          letter-spacing: 0.16px
+          text-decoration: none
+          padding-top: 30px
+          padding-bottom: 30px
+          transition: color 0.3s, background-color 0.3s
+          display: block
+          position: relative
+
+          @media (max-height: 700px)
+            padding-top: 15px
+            padding-bottom: 15px
+
+          @media (max-width: 1023px)
+            font-size: 36px
+
+          @media (max-width: 767px)
+            font-size: 32px
+
+          @media (max-width: 374px)
+            font-size: 30px
+
+          &:after
+            content: ''
+            position: absolute
+            top: 50%
+            right: 35px
+            transform: translateY(-50%)
+            width: 26px
+            height: 26px
+            background-image: url("data:image/svg+xml,%3Csvg width='26' height='26' viewBox='0 0 26 26' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M23.668 13.7051L11.668 1.70508' stroke='white' stroke-width='4'/%3E%3Cpath d='M11.668 24.3325L23.668 12.3325' stroke='white' stroke-width='4'/%3E%3C/svg%3E%0A")
+            background-repeat: no-repeat
+            background-position: 0 0
+            background-size: contain
+            opacity: 0
+            visibility: hidden
+            transition: opacity 0.3s, ease 0.3s
+
+          &:hover
+            color: #fff
+            background-color: #101820
+
+            &:after
+              opacity: 1
+              visibility: visible
+
+          span
+            max-width: 1320px + 25px + 25px
+            width: 100%
+            padding-right: 25px
+            padding-left: 25px
+            margin-right: auto
+            margin-left: auto
+            display: block
+            position: relative
+
+            @media (max-width: 1599px)
+              padding-left: 75px
+
+            @media (max-width: 767px)
+              padding-left: 50px
+
+            &:before
+              content: ''
+              position: absolute
+              top: 50%
+              left: -25px
+              transform: translateY(-50%)
+              background-image: url("data:image/svg+xml,%3Csvg width='25' height='17' viewBox='0 0 25 17' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M2 6.50012L10.4483 14.5001L23.8965 1.50012' stroke='%23101820' stroke-width='3'/%3E%3C/svg%3E%0A")
+              width: 25px
+              height: 17px
+              background-repeat: no-repeat
+              background-position: 0 0
+              background-size: contain
+              opacity: 0
+              visibility: hidden
+              transition: opacity 0.3s, ease 0.3s
+
+              @media (max-width: 1599px)
+                left: 25px
+
+              @media (max-width: 767px)
+                width: 15px
+                height: 10px

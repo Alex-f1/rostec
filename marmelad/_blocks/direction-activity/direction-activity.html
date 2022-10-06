@@ -5,59 +5,157 @@
         Направления <br> деятельности
       </h2>
     </div>
-    <div elem="direction">
-      <div elem="container" class="contain">
-        <div block="direction-block">
-          <div elem="body">
-            <div elem="head">
-              <a elem="other" href="#"></a>
-              <h3>Авиация</h3>
+    <div elem="inner">
+      <div elem="direction-head">
+        <div block="direction-name">
+          <div elem="section" class="contain">
+            <a elem="other" href="#" class="js-direction-other-name"></a>
+            <h3>Авиация</h3>
+            <div elem="list" class="js-direction-list">
+              <ul>
+                <li class="_is-active"><a href="#aviation_direction"><span>Авиация</span></a></li>
+                <li><a href="#transport_direction"><span>Транспорт</span></a></li>
+                <li><a href="#it_direction"><span>ИТ и Телеком</span></a></li>
+                <li><a href="#medicine_direction"><span>Здравоохранение</span></a></li>
+                <li><a href="#ecology_direction"><span>Экология</span></a></li>
+                <li><a href="#hr_direction"><span>HR</span></a></li>
+              </ul>
             </div>
-            <div elem="img">
-              <img src="img/direction-block-img.png" alt="">
-            </div>
-            <div elem="desc">
-              Повышение качества жизни людей через создание высокотехнологичных «умных» продуктов
-            </div>
-            <div elem="links">
-              <a href="#">направления</a>
-              <a href="#">структура</a>
-              <a href="#">продукты и проекты</a>
-              <a href="#">деятельность</a>
-            </div>
-            
           </div>
-        </div><!-- direction-block -->
+        </div><!-- direction-name -->
       </div>
-      {% include "news-block.html" %}
-      <a elem="more" href="#">Подробнее о направлении</a>
-    </div>
-    <div elem="direction" mods="transport">
-      <div elem="container" class="contain">
-        <div block="direction-block">
-          <div elem="body">
-            <div elem="head">
-              <a elem="other" href="#"></a>
-              <h3>Транспорт</h3>
+      <div elem="direction" id="aviation_direction"  style="background-image: url('img/direction-block-bg.jpg');">
+        <div elem="container">
+          <div block="direction-block">
+            <div elem="section" class="contain">
+              <div elem="body">
+                <div elem="img-mobile"><img src="img/direction-block-bg.jpg" alt=""></div>
+                <div elem="desc">
+                  Повышение качества жизни людей через создание высокотехнологичных «умных» продуктов
+                </div>
+                <div elem="links">
+                  <a href="#">направления</a>
+                  <a href="#">структура</a>
+                  <a href="#">продукты и проекты</a>
+                  <a href="#">деятельность</a>
+                </div>
+              </div>
             </div>
-            <div elem="img">
-              <img src="img/direction-block-img2.png" alt="">
-            </div>
-            <div elem="desc">
-              Повышение качества жизни людей через создание высокотехнологичных «умных» продуктов
-            </div>
-            <div elem="links">
-              <a href="#">направления</a>
-              <a href="#">структура</a>
-              <a href="#">продукты и проекты</a>
-              <a href="#">деятельность</a>
-            </div>
-            
-          </div>
-        </div><!-- direction-block -->
+          </div><!-- direction-block -->
+        </div>
+        {% include "news-block.html" %}
+        <a elem="more" href="#">Подробнее о направлении</a>
       </div>
-      {% include "news-block.html" %}
-      <a elem="more" href="#">Подробнее о направлении</a>
+      <div elem="direction" id="transport_direction" style="background-image: url('img/direction-block-bg2.jpg');">
+        <div elem="container">
+          <div block="direction-block">
+            <div elem="section" class="contain">
+              <div elem="body">
+                <div elem="img-mobile"><img src="img/direction-block-bg2.jpg" alt=""></div>
+                <div elem="desc">
+                  Повышение качества жизни людей через создание высокотехнологичных «умных» продуктов
+                </div>
+                <div elem="links">
+                  <a href="#">направления</a>
+                  <a href="#">структура</a>
+                  <a href="#">продукты и проекты</a>
+                  <a href="#">деятельность</a>
+                </div>
+              </div>
+            </div>
+          </div><!-- direction-block -->
+        </div>
+        {% include "news-block.html" %}
+        <a elem="more" href="#">Подробнее о направлении</a>
+      </div>
+      <div elem="direction" id="it_direction" style="background-image: url('img/direction-block-bg3.jpg');">
+        <div elem="container">
+          <div block="direction-block">
+            <div elem="section" class="contain">
+              <div elem="body">
+                <div elem="img-mobile"><img src="img/direction-block-bg3.jpg" alt=""></div>
+                <div elem="desc">
+                  Повышение качества жизни людей через создание высокотехнологичных «умных» продуктов
+                </div>
+                <div elem="links">
+                  <a href="#">направления</a>
+                  <a href="#">структура</a>
+                  <a href="#">продукты и проекты</a>
+                  <a href="#">деятельность</a>
+                </div>
+              </div>
+            </div>
+          </div><!-- direction-block -->
+        </div>
+        {% include "news-block.html" %}
+        <a elem="more" href="#">Подробнее о направлении</a>
+      </div>
+      <div elem="direction" id="medicine_direction" style="background-image: url('img/direction-block-bg4.jpg');">
+        <div elem="container">
+          <div block="direction-block">
+            <div elem="section" class="contain">
+              <div elem="body">
+                <div elem="img-mobile"><img src="img/direction-block-bg4.jpg" alt=""></div>
+                <div elem="desc">
+                  Повышение качества жизни людей через создание высокотехнологичных «умных» продуктов
+                </div>
+                <div elem="links">
+                  <a href="#">направления</a>
+                  <a href="#">структура</a>
+                  <a href="#">продукты и проекты</a>
+                  <a href="#">деятельность</a>
+                </div>
+              </div>
+            </div>
+          </div><!-- direction-block -->
+        </div>
+        {% include "news-block.html" %}
+        <a elem="more" href="#">Подробнее о направлении</a>
+      </div>
+      <div elem="direction" id="ecology_direction" style="background-image: url('img/direction-block-bg5.jpg');">
+        <div elem="container">
+          <div block="direction-block">
+            <div elem="section" class="contain">
+              <div elem="body">
+                <div elem="img-mobile"><img src="img/direction-block-bg5.jpg" alt=""></div>
+                <div elem="desc">
+                  Повышение качества жизни людей через создание высокотехнологичных «умных» продуктов
+                </div>
+                <div elem="links">
+                  <a href="#">направления</a>
+                  <a href="#">структура</a>
+                  <a href="#">продукты и проекты</a>
+                  <a href="#">деятельность</a>
+                </div>
+              </div>
+            </div>
+          </div><!-- direction-block -->
+        </div>
+        {% include "news-block.html" %}
+        <a elem="more" href="#">Подробнее о направлении</a>
+      </div>
+      <div elem="direction" id="hr_direction" style="background-image: url('img/direction-block-bg6.jpg');">
+        <div elem="container">
+          <div block="direction-block">
+            <div elem="section" class="contain">
+              <div elem="body">
+                <div elem="img-mobile"><img src="img/direction-block-bg6.jpg" alt=""></div>
+                <div elem="desc">
+                  Повышение качества жизни людей через создание высокотехнологичных «умных» продуктов
+                </div>
+                <div elem="links">
+                  <a href="#">направления</a>
+                  <a href="#">структура</a>
+                  <a href="#">продукты и проекты</a>
+                  <a href="#">деятельность</a>
+                </div>
+              </div>
+            </div>
+          </div><!-- direction-block -->
+        </div>
+        {% include "news-block.html" %}
+        <a elem="more" href="#">Подробнее о направлении</a>
+      </div>
     </div>
   </div>
 </div><!-- news-block -->
