@@ -1,0 +1,62 @@
+.nav-direction
+  flex: none
+  position: relative
+  z-index: 5
+
+  .direction-name
+    padding-top: 22px
+    padding-bottom: 22px
+    width: auto
+    background-color: transparent
+
+    &__list
+      top: 126px
+
+  &__inner
+    display: flex
+    align-items: center
+
+  &__nav
+    margin-left: auto
+
+    ul
+      list-style: none
+      display: flex
+      align-items: center
+      margin: 0
+      padding-left: 0
+
+      li
+        margin-right: 50px
+
+        &:last-child
+          margin-right: 0
+
+        a
+          font-size: 14px
+          color: #A39061
+          font-weight: 600
+          line-height: 1.1
+          letter-spacing: 1.6px
+          text-transform: uppercase
+          text-decoration: none
+          padding-top: 40px
+          padding-bottom: 40px
+          position: relative
+
+          &:after
+            content: ''
+            position: absolute
+            bottom: 0
+            left: 0
+            width: 100%
+            height: 3px
+            background-color: #101820
+            opacity: 0
+            visibility: hidden
+            transition: opacity 0.3s
+
+          &:hover
+            &:after
+              opacity: 1
+              visibility: visible

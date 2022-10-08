@@ -28,7 +28,7 @@
         {% block inlineStyles %}{% endblock %}
     </head>
 
-    <body block="app" class="{{ bodyClasses }}">
+    <body block="app" class="{{ bodyClasses }}" {% if pageTitle != "Главная" %}mods="inner-page"{% endif %}>
 
         <div elem="wrapper">
 

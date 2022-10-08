@@ -26,4 +26,8 @@ if (window.NodeList && !NodeList.prototype.forEach) {
  * ========================================================================== */
 $(function() {
   //=require ../_blocks/**/*.js
+
+  $('.js-go-to-top').on('click', function() {
+    $('html, body').stop().animate({ scrollTop: 0 }, 1000, 'swing');
+  });
 });

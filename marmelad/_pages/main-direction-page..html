@@ -1,0 +1,98 @@
+= yaml =
+pageTitle: Направления
+bodyClasses:
+layout: !!map
+  header: true
+  footer: true
+  left: false
+  right: false
+= yaml =
+
+{% extends 'app.html' %}
+
+
+{% block main %}
+
+  <div block="inner-header" mods="img">
+    <div elem="section">
+      {% include "nav-direction.html" %}
+      <div elem="inner" style="background-image: url('img/inner-page-img.jpg');">
+        <div elem="content" class="contain">
+          <h1>
+            Разработка, производство и техническое обслуживание современных гражданской и военной авиатехники
+          </h1>
+        </div>
+      </div>
+    </div>
+  </div><!-- inner-header -->
+
+  {% include "about-direction.html" %}
+
+  <div block="news-block">
+    <div elem="section">
+      <div elem="inner" class="contain">
+        <div elem="head">
+          <h3>Новости Авиации</h3>
+          <a elem="all" href="#">Все новости</a>
+        </div>
+        <div elem="items">
+          <div elem="item">
+            <div block="news-thumb">
+              <div elem="body">
+                <div elem="info">
+                  <div elem="date">02.06</div>
+                  <div elem="tags">
+                    <a elem="tag" href="#"># ПМЭФ</a>
+                  </div>
+                </div>
+                <a elem="img" href="#">
+                  <img src="img/news-thumb-img.jpg" alt="">
+                </a>
+                <div elem="text">
+                  Новикомбанк профинансирует инфраструктурные проекты «Росэлектроники»
+                </div>
+              </div>
+            </div><!-- news-thumb -->
+          </div>
+          <div elem="item">
+            <div block="news-thumb">
+              <div elem="body">
+                <div elem="info">
+                  <div elem="date">02.06</div>
+                  <div elem="tags">
+                    <a elem="tag" href="#"># ПМЭФ</a>
+                  </div>
+                </div>
+                <a elem="img" href="#">
+                  <img src="img/news-thumb-img2.jpg" alt="">
+                </a>
+                <div elem="text">
+                  На предприятиях «Росэлектроники» будет внедрена национальная инжиниринговая платформа
+                </div>
+              </div>
+            </div><!-- news-thumb -->
+          </div>
+          <div elem="item">
+            <div block="news-thumb">
+              <div elem="body">
+                <div elem="info">
+                  <div elem="date">02.06</div>
+                  <div elem="tags">
+                    <a elem="tag" href="#"># ПМЭФ</a>
+                  </div>
+                </div>
+                <a elem="img" href="#">
+                  <img src="img/news-thumb-img3.jpg" alt="">
+                </a>
+                <div elem="text">
+                  Ростех разработал портативную РЛС для объектов критически важной инфраструктуры
+                </div>
+              </div>
+            </div><!-- news-thumb -->
+          </div>
+        </div>
+      </div>
+    </div>
+  </div><!-- news-block -->
+
+{% endblock %}

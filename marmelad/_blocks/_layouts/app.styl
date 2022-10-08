@@ -12,6 +12,22 @@ html
   height: 100%
   height: 100vh
 
+  &--inner-page
+    .top-panel
+      background-color: #101820
+      padding-top: 8px
+      padding-bottom: 8px
+
+      .logo
+        &__img
+          height: 46px
+          overflow: hidden
+
+    .news-block
+      padding-top: 130px
+      padding-bottom: 130px
+      background-color: #FAFCFF
+
   &__wrapper
     display: flex
     flex-direction: column
@@ -25,10 +41,51 @@ html
   &__main
     flex: 1
 
+h2
+  font-size: 48px
+  color: #101820
+  font-weight: 600
+  line-height: 1.1
+  letter-spacing: 0.16px
+  margin-top: 0
+  margin-bottom: 30px
+
 .contain
-  max-width: 1320px + 25px + 25px 
+  max-width: 1320px + 25px + 25px
   width: 100%
   padding-right: 25px
   padding-left: 25px
   margin-right: auto
   margin-left: auto
+
+.inner-header
+  background-color: #F5F8FA
+
+  &--img
+    & ^[0]
+      &__inner
+        min-height: 630px
+
+  &__inner
+    background-repeat: no-repeat
+    background-position: 50% 0
+    background-size: cover
+    // background-attachment: fixed
+
+  &__content
+    padding-top: 88px
+    padding-bottom: 16px
+
+    h1
+      font-weight: 700
+      font-size: 64px
+      line-height: 0.9
+      letter-spacing: -0.64px
+      background: linear-gradient(225.29deg, #101820 22.8%, #2C3642 99.5%)
+      -webkit-background-clip: text
+      -webkit-text-fill-color: transparent
+      background-clip: text
+      text-fill-color: transparent
+      max-width: 864px
+      width: 100%
+      margin: 0
