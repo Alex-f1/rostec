@@ -6,6 +6,13 @@
   position: relative
   overflow: hidden
 
+  @media (max-width: 1023px)
+    min-height: 540px
+
+  @media (max-width: 767px)
+    padding: 25px
+    min-height: 440px
+
   &__body
     width: 100%
 
@@ -20,6 +27,9 @@
     line-height: 1.1
     letter-spacing: 0.16px
     margin-bottom: 20px
+
+    @media (max-width: 767px)
+      font-size: 26px
 
   &__text
     font-size: 16px

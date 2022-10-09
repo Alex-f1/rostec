@@ -2,6 +2,10 @@
   padding-top: 128px
   padding-bottom: 100px
 
+  @media (max-width: 1279px)
+    padding-top: 65px
+    padding-bottom: 50px
+
   &__items
     display: flex
     flex-wrap: wrap
@@ -11,3 +15,10 @@
     width: 25%
     padding-left: 30px
     padding-bottom: 30px
+    display: flex
+
+    @media (max-width: 1023px)
+      width: 50%
+
+    @media (max-width: 767px)
+      width: 100%
