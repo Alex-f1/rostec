@@ -1,0 +1,55 @@
+.structure-thumb
+  min-height: 430px
+  overflow: hidden
+  padding: 40px 20px 30px 20px
+  background-color: #FAFCFF
+  display: flex
+
+  &:hover
+    & ^[0]
+      &__text
+        margin-bottom: 0
+        opacity: 1
+        visibility: visible
+        height: 100%
+        overflow: visible
+
+  &__body
+    width: 100%
+    display: flex
+    flex-direction: column
+    justify-content: space-between
+
+  &__img-wrapper
+    text-align: center
+    display: flex
+    justify-content: center
+    align-items: center
+    height: 130px
+
+  &__img
+    width: 100%
+
+    img
+      vertical-align: top
+
+  &__name
+    font-size: 24px
+    color: #A39061
+    font-weight: 400
+    line-height: 1.1
+    letter-spacing: 0.16px
+
+  &__text
+    font-size: 16px
+    color: #101820
+    font-weight: 400
+    line-height: 1.1
+    letter-spacing: 0.16px
+    margin-top: 20px
+    height: 72px
+    overflow: hidden
+    margin-bottom: -100px
+    opacity: 0
+    visibility: hidden
+    transition: margin-bottom 0.3s, opacity 0.3s, ease 0.3s
