@@ -1,0 +1,143 @@
+= yaml =
+pageTitle: Направление
+bodyClasses:
+layout: !!map
+  header: true
+  footer: true
+  left: false
+  right: false
+= yaml =
+
+{% extends 'app.html' %}
+
+
+{% block main %}
+
+  <div block="inner-header">
+    <div elem="section">
+      <div block="nav-direction">
+        <div elem="section">
+          <div elem="panel">
+            <div elem="inner" class="contain">
+              <div block="direction-name">
+                <div elem="section">
+                  <a elem="other" href="#" class="js-direction-other-name"></a>
+                  <h3>Авиация</h3>
+                  <div elem="list" class="js-direction-list">
+                    <ul>
+                      <li class="_is-active"><a href="#"><span>Авиация</span></a></li>
+                      <li><a href="#"><span>Транспорт</span></a></li>
+                      <li><a href="#"><span>ИТ и Телеком</span></a></li>
+                      <li><a href="#"><span>Здравоохранение</span></a></li>
+                      <li><a href="#"><span>Экология</span></a></li>
+                      <li><a href="#"><span>HR</span></a></li>
+                    </ul>
+                  </div>
+                </div>
+              </div><!-- direction-name -->
+              <nav elem="nav">
+                <ul>
+                  <li class="_is-active"><a href="#">направления</a></li>
+                  <li><a href="#">структура</a></li>
+                  <li><a href="#">продукты и проекты</a></li>
+                  <li><a href="#">деятельность</a></li>
+                </ul>
+              </nav>
+            </div>
+          </div>
+        </div>
+      </div><!-- nav-direction -->
+      <div elem="inner">
+        <div elem="content" class="contain">
+          <h1>
+            Ключевые направления в Авиации
+          </h1>
+        </div>
+      </div>
+    </div>
+  </div><!-- inner-header -->
+
+  <div block="production-block">
+    <div elem="section">
+      <div elem="inner" class="contain">
+        <div elem="items">
+          <div elem="item">
+            <div block="production-thumb">
+              <div elem="body">
+                <div elem="content">
+                  <div elem="name">Разработка и производство авиационной техники</div>
+                  <div elem="text">
+                    Гражданские и военные самолеты, вертолеты, беспилотные воздушные суда
+                  </div>
+                </div>
+                <div elem="img"><img src="img/production-thumb-img.png" alt=""></div>
+              </div>
+            </div><!-- production-thumb -->
+          </div>
+          <div elem="item">
+            <div block="production-thumb">
+              <div elem="body">
+                <div elem="content">
+                  <div elem="name">Двигателестроение</div>
+                  <div elem="text">
+                    Двигатели для военной и гражданской авиации, космических программ, установки различной мощности для производства
+                    электрической и тепловой энергии, газоперекачивающие и корабельные газотурбинные агрегаты.
+                  </div>
+                </div>
+                <div elem="img"><img src="img/production-thumb-img3.png" alt=""></div>
+              </div>
+            </div><!-- production-thumb -->
+          </div>
+          <div elem="item">
+            <div block="production-thumb">
+              <div elem="body">
+                <div elem="content">
+                  <div elem="name">
+                    Производитель № 1 в мире
+                    ударных, среднетяжелых и сверхтяжелых вертолетов
+                  </div>
+                  <div elem="text">
+                    Конструкторские бюро, вертолетные заводы, предприятия по производству, обслуживанию и ремонту комплектующих изделий
+                  </div>
+                </div>
+                <div elem="img"><img src="img/production-thumb-img4.png" alt=""></div>
+              </div>
+            </div><!-- production-thumb -->
+          </div>
+          <div elem="item">
+            <div block="production-thumb">
+              <div elem="body">
+                <div elem="content">
+                  <div elem="name">Разработка и производство радиоэлектронного оборудования</div>
+                  <div elem="text">
+                    Производство средств радиоэлектронной борьбы и государственного опознавания, авиационных приборов, а также
+                    измерительной
+                    аппаратуры различного назначения
+                  </div>
+                </div>
+                <div elem="img"><img src="img/production-thumb-img2.png" alt=""></div>
+              </div>
+            </div><!-- production-thumb -->
+          </div>
+          <div elem="item">
+            <div block="production-thumb">
+              <div elem="body">
+                <div elem="content">
+                  <div elem="name">Техническое <br> обслуживание</div>
+                  <div elem="text">
+                    Проведение испытаний, гарантийное и пост-гарантийное обслуживание агрегатов и техники
+                  </div>
+                </div>
+                <div elem="img"><img src="img/production-thumb-img5.png" alt=""></div>
+              </div>
+            </div><!-- production-thumb -->
+          </div>
+          
+        </div>
+      </div>
+    </div>
+  </div><!-- production-block -->
+  
+  {% include "structure-block.html" %}
+
+{% endblock %}
