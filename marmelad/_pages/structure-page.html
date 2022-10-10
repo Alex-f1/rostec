@@ -1,0 +1,196 @@
+= yaml =
+pageTitle: Направление
+bodyClasses:
+layout: !!map
+  header: true
+  footer: true
+  left: false
+  right: false
+= yaml =
+
+{% extends 'app.html' %}
+
+
+{% block main %}
+
+  <div block="inner-header">
+    <div elem="section">
+      <div block="nav-direction">
+        <div elem="section">
+          <div elem="panel">
+            <div elem="inner" class="contain">
+              <div block="direction-name">
+                <div elem="section">
+                  <a elem="other" href="#" class="js-direction-other-name"></a>
+                  <h3>Авиация</h3>
+                  <div elem="list" class="js-direction-list">
+                    <ul>
+                      <li class="_is-active"><a href="#"><span>Авиация</span></a></li>
+                      <li><a href="#"><span>Транспорт</span></a></li>
+                      <li><a href="#"><span>ИТ и Телеком</span></a></li>
+                      <li><a href="#"><span>Здравоохранение</span></a></li>
+                      <li><a href="#"><span>Экология</span></a></li>
+                      <li><a href="#"><span>HR</span></a></li>
+                    </ul>
+                  </div>
+                </div>
+              </div><!-- direction-name -->
+              <nav elem="nav">
+                <ul>
+                  <li><a href="#">направления</a></li>
+                  <li class="_is-active"><a href="#">структура</a></li>
+                  <li><a href="#">продукты и проекты</a></li>
+                  <li><a href="#">деятельность</a></li>
+                </ul>
+              </nav>
+            </div>
+          </div>
+        </div>
+      </div><!-- nav-direction -->
+      <div elem="inner">
+        <div elem="content" class="contain">
+          <h1>
+            Структура
+          </h1>
+        </div>
+      </div>
+    </div>
+  </div><!-- inner-header -->
+
+  <div block="structure-block" mods="structure-page">
+    <div elem="section">
+      <div elem="inner" class="contain">
+        <div elem="head">
+          <h2>Структура</h2>
+        </div>
+        <div elem="items">
+          <div elem="item">
+            <div block="structure-thumb" mods="color-red">
+              <div elem="body">
+                <div elem="img-wrapper">
+                  <div elem="img">
+                    <img src="img/structure-thumb-mods-img.png" width="210" height="50" alt="">
+                  </div>
+                </div>
+                <div elem="content">
+                  <div elem="name">Вертолеты России</div>
+                  <div elem="text">
+                    <p>
+                      Производитель № 1 в мире в сегменте ударных, среднетяжелых и сверхтяжелых вертолетов. География АО «Вертолеты России»
+                      охватывает всю страну.
+                    </p>
+                    <p>
+                      В состав холдинга входят конструкторские бюро, вертолетные заводы, предприятия по производству, обслуживанию и ремонту
+                      комплектующих изделий, авиаремонтные заводы, а также сервисные компании, обеспечивающие послепродажное обслуживание
+                      (ППО) техники в России и за ее пределами.
+                    </p>
+                  </div>
+                </div>
+              </div>
+            </div><!-- structure-thumb -->
+          </div>
+          <div elem="item">
+            <div block="structure-thumb">
+              <div elem="body">
+                <div elem="img-wrapper">
+                  <div elem="img">
+                    <img src="img/structure-thumb-mods-img3.png" width="171" height="110"  alt="">
+                  </div>
+                </div>
+                <div elem="content">
+                  <div elem="name">ОДК</div>
+                  <div elem="text">
+                    <p>
+                      Объединенная двигателестроительная корпорация является лидером двигателестроительной отрасли России, объединяя более 85%
+                      активов отрасли.
+                    </p>
+                    <p>
+                      Холдинг производит двигатели для военной и гражданской авиации, космических программ, установки различной мощности для
+                      производства электрической и тепловой энергии, газоперекачивающие и корабельные газотурбинные агрегаты.
+                    </p>
+                  </div>
+                </div>
+              </div>
+            </div><!-- structure-thumb -->
+          </div>
+          <div elem="item">
+            <div block="structure-thumb">
+              <div elem="body">
+                <div elem="img-wrapper">
+                  <div elem="img">
+                    <img src="img/structure-thumb-mods-img2.png" width="383" height="56"  alt="">
+                  </div>
+                </div>
+                <div elem="content">
+                  <div elem="name">Технодинамика</div>
+                  <div elem="text">
+                    <p>
+                      Холдинг специализируется на разработке, производстве, послепродажном обслуживании систем и агрегатов самолетов и
+                      вертолетов гражданского и военного назначения, а также выпускает ряд изделий для космической, нефтегазовой, транспортной
+                      и других отраслей. Продукция холдинга устанавливается на все российские авиалайнеры, транспортные самолеты и вертолеты.
+                    </p>
+                    <p>
+                      В сегменте транспортной авиации доля холдинга составляет 75%, в сегменте боевой авиации — 63%, в сегменте пассажирской
+                      авиации — 17%.
+                    </p>
+                  </div>
+                </div>
+              </div>
+            </div><!-- structure-thumb -->
+          </div>
+          <div elem="item">
+            <div block="structure-thumb" mods="color-black">
+              <div elem="body">
+                <div elem="img-wrapper">
+                  <div elem="img">
+                    <img src="img/structure-thumb-mods-img4.png" width="125" height="126"  alt="">
+                  </div>
+                </div>
+                <div elem="content">
+                  <div elem="name">КРЭТ</div>
+                  <div elem="text">
+                    <p>
+                      Холдинг занимает лидирующие позиции в области разработки и производства средств радиоэлектронной борьбы (более 60%
+                      рынка) и государственного опознавания (более 90% рынка), авиационных приборов и комплексов радиоэлектронного
+                      оборудования (более 80% рынка), а также измерительной аппаратуры различного назначения.
+                    </p>
+                    <p>
+                      Перспективным направлением деятельности холдинга является значительное расширение спектра производимой гражданской
+                      продукции.
+                    </p>
+                  </div>
+                </div>
+              </div>
+            </div><!-- structure-thumb -->
+          </div>
+          <div elem="item">
+            <div block="structure-thumb">
+              <div elem="body">
+                <div elem="img-wrapper">
+                  <div elem="img">
+                    <img src="img/structure-thumb-mods-img5.png" width="201" height="53"  alt="">
+                  </div>
+                </div>
+                <div elem="content">
+                  <div elem="name">ОАК</div>
+                  <div elem="text">
+                    <p>
+                      ОАК включает в себя более 30 предприятий и является одним из крупнейших игроков на мировом рынке авиастроения. ОАК
+                      выпускает воздушные суда всемирно известных брендов «Су», «МиГ», «Ил», «Ту», «Як», «Бе», а также новых Superjet 100 и
+                      «МС-21», выполняет полный цикл работ - от их проектировани до послепродажного обслуживания.
+                    </p>
+                    <p>
+                      Приоритетные направления деятельности Корпорации — разработка, производство, испытания и сопровождение эксплуатации,
+                      гарантийное и сервисное обслуживание авиационной техники гражданского и военного назначения.
+                    </p>
+                  </div>
+                </div>
+              </div>
+            </div><!-- structure-thumb -->
+          </div>
+        </div>
+      </div>
+    </div>
+  </div><!-- structure-block -->
+
+{% endblock %}
