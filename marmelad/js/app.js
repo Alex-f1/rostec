@@ -30,4 +30,8 @@ $(function() {
   $('.js-go-to-top').on('click', function() {
     $('html, body').stop().animate({ scrollTop: 0 }, 1000, 'swing');
   });
+
+  $('.js-button-filter').on('click', function() {
+    $(this).toggleClass('_is-active');
+  });
 });
