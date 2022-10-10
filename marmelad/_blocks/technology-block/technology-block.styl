@@ -1,0 +1,35 @@
+.technology-block
+  padding-top: 128px
+  padding-bottom: 100px
+
+  @media (max-width: 1279px)
+    padding-top: 65px
+    padding-bottom: 50px
+
+  &__content
+    overflow-x: auto
+
+    table
+      width: 100%
+
+      tr
+        td
+          font-size: 12px
+          color: #A39061
+          font-weight: 600
+          line-height: 1.1
+          letter-spacing: 1.6px
+          text-transform: uppercase
+          padding: 24px 15px
+          border-top: 1px solid #F0F4FA
+          width: 25%
+
+          @media (max-width: 767px)
+            padding-top: 15px
+
+          &:first-child
+            padding-left: 0
+
+        &:last-child
+          td
+            border-bottom: 1px solid #F0F4FA
