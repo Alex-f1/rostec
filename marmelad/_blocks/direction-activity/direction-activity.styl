@@ -24,15 +24,18 @@
       font-size: 52px
       margin-bottom: 50px
 
+    @media (max-width: 479px)
+      font-size: 46px
+
     @media (max-width: 374px)
-      font-size: 42px
+      font-size: 40px
 
   &__inner
     background-color: #F5F8FA
     padding-top: 70px
 
     @media (max-width: 767px)
-      padding-top 20px
+      padding-top: 20px
 
   &__direction-head
     width: 100%
@@ -126,6 +129,11 @@
   padding-top: 25px
   padding-bottom: 25px
   width: 100%
+  transition: background-color 0.3s, ease 0.3s
+  cursor: pointer
+
+  &:hover
+    background-color: #fff
 
   &._is-fixed
     background-color: #fff

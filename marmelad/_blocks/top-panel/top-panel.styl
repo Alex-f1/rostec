@@ -25,6 +25,10 @@
     @media (max-width: 1023px)
       margin-left: auto
 
+    @media (max-width: 767px)
+      width: 100%
+      justify-content: flex-end
+
     svg
       fill: transparent
       width: 100%
@@ -34,35 +38,35 @@
         transition: stroke 0.3s
 
   &__language
-    flex: 0 0 32px
-    width: 32px
-    max-width: 32px
-    height: 32px
+    flex: 0 0 26px
+    width: 26px
+    max-width: 26px
+    height: 26px
     margin-right: 50px
     position: relative
 
     @media (max-width: 1279px)
-      margin-right: 25px
+      margin-right: 35px
 
     @media (max-width: 1023px)
-      flex: 0 0 28px
-      width: 28px
-      max-width: 28px
-      height: 28px
+      flex: 0 0 24px
+      width: 24px
+      max-width: 24px
+      height: 24px
       margin-right: 35px
 
     &:after
       content: ''
       position: absolute
-      top: -22px
-      left: -22px
+      top: -25px
+      left: -25px
       width: 78px
       height: 78px
       background: linear-gradient(225.29deg, #101820 22.8%, #2C3642 99.5%)
       opacity: 0
       visibility: hidden
       transition: opacity 0.2s, ease 0.2s
-      z-index 2
+      z-index: 2
 
     &._is-active
       &:after
@@ -76,8 +80,8 @@
           transform: translateY(0)
 
   &__button-language
-    width: 32px
-    height: 32px
+    width: 26px
+    height: 26px
     display: flex
     border: none
     padding: 0
@@ -95,13 +99,16 @@
     width: 214px
     background: linear-gradient(225.29deg, #101820 22.8%, #2C3642 99.5%)
     position: absolute
-    top: 56px
-    left: -22px
+    top: 52px
+    left: -25px
     z-index: 1
     opacity: 0
     visibility: hidden
     transform: translateY(-10px)
     transition: opacity 0.4s, transform 0.4s, ease 0.4s
+
+    @media (max-width: 767px)
+      width: 195px
 
     a
       font-size: 16px
@@ -136,10 +143,10 @@
           display: block
 
   &__button-search
-    flex: 0 0 32px
-    width: 32px
-    max-width: 32px
-    height: 32px
+    flex: 0 0 28px
+    width: 28px
+    max-width: 28px
+    height: 28px
     display: flex
     border: none
     padding: 0
@@ -151,10 +158,6 @@
       margin-right: 25px
 
     @media (max-width: 1023px)
-      flex: 0 0 28px
-      width: 28px
-      max-width: 28px
-      height: 28px
       margin-right: 35px
 
     &:hover
@@ -181,6 +184,9 @@
       flex: 0 0 28px
       width: 28px
       max-width: 28px
+
+    @media (max-width: 767px)
+      margin-left: 0
 
     &:hover
       &:before, &:after

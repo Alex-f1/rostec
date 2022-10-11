@@ -275,6 +275,7 @@
     max-width: 90px
     height: 32px
     margin-left: 15px
+    position: relative
 
     @media (max-width: 767px)
       flex: 0 0 70px
@@ -286,8 +287,40 @@
       bottom: -10px
 
     @media (max-width: 374px)
-      position: static
+      position: relative
+      right: auto
+      bottom: auto
       margin-top: 15px
+
+    &:after
+      content: ''
+      position: absolute
+      top: -6px
+      left: -6px
+      width: 44px
+      height: 44px
+      background: linear-gradient(225.29deg, #101820 22.8%, #2C3642 99.5%)
+      opacity: 0
+      visibility: hidden
+      transition: opacity 0.2s, ease 0.2s
+      z-index: 2
+
+      @media (max-width: 767px)
+        top: -4px
+        left: -6px
+        width: 36px
+        height: 36px
+
+    &._is-active
+      &:after
+        opacity: 1
+        visibility: visible
+
+      & ^[0]
+        &__language-selection
+          opacity: 1
+          visibility: visible
+          transform: translateY(0)
 
   &__button-language
     display: flex
@@ -296,6 +329,8 @@
     padding: 0
     background-color: transparent
     cursor: pointer
+    position: relative
+    z-index: 3
 
     @media (max-width: 1023px)
       flex: 0 0 28px
@@ -335,6 +370,61 @@
 
       span
         color: #a39061
+
+  &__language-selection
+    width: 214px
+    background: linear-gradient(225.29deg, #101820 22.8%, #2C3642 99.5%)
+    position: absolute
+    top: -103px
+    left: -6px
+    z-index: 1
+    opacity: 0
+    visibility: hidden
+    transform: translateY(-5px)
+    transition: opacity 0.4s, transform 0.4s, ease 0.4s
+
+    @media (max-width: 1360px)
+      left: -176px
+
+    @media (max-width: 767px)
+      top: -101px
+      left: -165px
+      width: 195px
+
+    @media (max-width: 374px)
+      left: -6px
+
+    a
+      font-size: 16px
+      color: #A39061
+      font-weight: 400
+      line-height: 1.1
+      letter-spacing: 0.16px
+      text-decoration: none
+      border-top: 1px solid rgba(255, 255, 255, 0.2)
+      padding: 15px 25px
+      display: flex
+      align-items: center
+
+      &:hover
+        color: #8f8f8c
+
+      &:after
+        content: ''
+        flex: 0 0 18px
+        width: 18px
+        max-width: 18px
+        height: 12px
+        margin-left: auto
+        background-image: url("data:image/svg+xml,%3Csvg width='18' height='12' viewBox='0 0 18 12' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M1 4.46154L7.17323 10L17 1' stroke='white' stroke-width='2'/%3E%3C/svg%3E%0A")
+        display: none
+
+      &._is-active
+        color: #fff
+        pointer-events: none
+
+        &:after
+          display: block
 
   &__copy
     font-size: 12px

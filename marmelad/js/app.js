@@ -34,4 +34,17 @@ $(function() {
   $('.js-button-filter').on('click', function() {
     $(this).toggleClass('_is-active');
   });
+
+  $('.js-footer-button-language').on('click', function (event) {
+    event.preventDefault();
+    $(this).closest('.footer__language').toggleClass('_is-active');
+    $('.js-footer-language-selection').toggleClass('_is-show');
+  });
+  $(document).on('click', function (e) {
+    if ($(e.target).closest('.footer__language').length) {
+      return;
+    }
+    $('.footer__language').removeClass('_is-active');
+    $('.js-footer-language-selection').removeClass('_is-show');
+  });
 });
