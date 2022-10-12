@@ -13,6 +13,12 @@
     padding: 25px
     min-height: 440px
 
+  &:hover
+    & ^[0]
+      &__img
+        img
+          transform: scale(1.15)
+
   &__body
     width: 100%
 
@@ -44,7 +50,7 @@
     position: absolute
     right: 0
     bottom: 0
-    width: 100%
 
     img
       vertical-align: top
+      transition: transform 1s

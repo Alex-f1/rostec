@@ -1,7 +1,15 @@
 .nav-direction
   flex: none
+  width: 100%
   position: relative
   z-index: 5
+  transition: transform 0.3s, background-color .3s, ease 0.3s
+
+  &._is-fixed
+    top: 0
+    left: 0
+    position: fixed
+    background-color: #fff
 
   .direction-name
     flex: 0 0 auto
@@ -13,6 +21,16 @@
 
     @media (max-width: 767px)
       margin-right: 15px
+
+    &:hover
+      h3
+        color: #a39061
+
+      h3 + .direction-name__other
+        background-image: url("data:image/svg+xml,%3Csvg width='20' height='30' viewBox='0 0 21 30' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M2 12L10.5 3L19 12' stroke='%23A39061' stroke-width='3'/%3E%3Cpath d='M2 19L10.5 27L19 19' stroke='%23A39061' stroke-width='3'/%3E%3C/svg%3E%0A")
+
+    &__other
+      order: -1
 
     &__list
       top: 125px
@@ -54,6 +72,7 @@
 
         &._is-active
           a
+            color: #101820
             pointer-events: none
 
             &:after
@@ -72,6 +91,7 @@
           padding-bottom: 40px
           position: relative
           display: block
+          transition: color 0.3s
 
           @media (max-width: 767px)
             padding-top: 20px
@@ -90,6 +110,4 @@
             transition: opacity 0.3s
 
           &:hover
-            &:after
-              opacity: 1
-              visibility: visible
+            color: #101820
