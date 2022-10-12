@@ -2,10 +2,19 @@
   padding-top: 120px
   padding-bottom: 120px
   background-color: #F0F4FA
+  min-height: 450px
 
   @media (max-width: 767px)
     padding-top: 40px
     padding-bottom: 90px
+
+  &._is-success
+    & ^[0]
+      &__fields
+        display: none
+
+      &__success
+        display: block
 
   &__wrapper
     display: flex
@@ -19,7 +28,7 @@
       flex-direction: column
 
   &__head
-    max-width: 310px
+    max-width: 350px
     margin-right: 25px
 
     @media (max-width: 767px)
@@ -75,6 +84,19 @@
 
     &:last-child
       margin-bottom: 0
+
+    &._is-error
+      & ^[0]
+        &__input
+          input
+            color: #b31218
+            border-color: #B31218
+
+        &__button-submit
+          background-image: url("data:image/svg+xml,%3Csvg width='26' height='26' viewBox='0 0 26 26' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cg opacity='1'%3E%3Cpath d='M23.668 13.7051L11.668 1.70508' stroke='%23B31218' stroke-width='4'/%3E%3Cpath d='M11.668 24.3325L23.668 12.3325' stroke='%23B31218' stroke-width='4'/%3E%3C/g%3E%3C/svg%3E%0A")
+
+        &__text-error
+          display: block
 
   &__choice-direction
     font-size: 20px
@@ -190,7 +212,6 @@
 
   &__input
     position: relative
-    margin-bottom: 15px
 
     input
       font-size: 20px
@@ -203,6 +224,7 @@
       background-color: transparent
       border-bottom: 3px solid #101820
       padding-bottom: 15px
+      padding-left: 8px
       width: 100%
       height: 42px
       transition: color 0.3s
@@ -224,7 +246,7 @@
   &__button-submit
     position: absolute
     top: 0
-    right: 0
+    right: 8px
     width: 26px
     height: 26px
     border: none
@@ -234,6 +256,10 @@
     background-size: contain
     background-position: 0 0
     cursor: pointer
+    transition: background .3s
+
+    &:hover
+      background-image: url("data:image/svg+xml,%3Csvg width='26' height='26' viewBox='0 0 26 26' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cg opacity='1'%3E%3Cpath d='M23.668 13.7051L11.668 1.70508' stroke='%23101820' stroke-width='4'/%3E%3Cpath d='M11.668 24.3325L23.668 12.3325' stroke='%23101820' stroke-width='4'/%3E%3C/g%3E%3C/svg%3E%0A")
 
   &__note
     font-size: 16px
@@ -242,3 +268,39 @@
     line-height: 1.1
     letter-spacing: 0.16px
     display: block
+    margin-top: 25px
+
+  &__text-error
+    font-size: 16px
+    color: #B31218
+    font-weight: 400
+    line-height: 1
+    letter-spacing: 0.16px
+    display: none
+    margin-top: 5px
+
+  &__success
+    max-width: 474px
+    width: 100%
+    padding-top: 65px
+    display: none
+
+    @media (max-width: 767px)
+      padding-top: 0
+
+    span
+      font-size: 20px
+      color: #101820
+      font-weight: 400
+      line-height: 1.1
+      letter-spacing: 0.16px
+
+  &__icon-success
+    width: 48px
+    height: 48px
+    display: block
+    background-image: url("data:image/svg+xml,%3Csvg width='48' height='48' viewBox='0 0 48 48' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M42 43L6 43M42 43L42 19.5432M42 43L27.9375 31.2716M6 43L6 19.5432M6 43L20.0625 31.2716M6 19.5432L12 14.6955M6 19.5432L12 24.5473M42 19.5432L36 14.6955M42 19.5432L36 24.5473M20.0625 31.2716L24 27.9877L27.9375 31.2716M20.0625 31.2716L12 24.5473M27.9375 31.2716L36 24.5473M12 14.6955V10.9375H16.6512M12 14.6955L12 24.5473M16.6512 10.9375L24 5L31.3488 10.9375M16.6512 10.9375L31.3488 10.9375M31.3488 10.9375H36V14.6955M36 14.6955V24.5473' stroke='black' stroke-width='3' stroke-linejoin='bevel'/%3E%3C/svg%3E%0A")
+    background-repeat: no-repeat
+    background-size: contain
+    background-position: 0 0
+    margin-bottom: 15px
