@@ -16,6 +16,19 @@
       &__success
         display: block
 
+  &._is-error
+    & ^[0]
+      &__input
+        input
+          color: #b31218
+          border-color: #B31218
+
+      &__button-submit
+        background-image: url("data:image/svg+xml,%3Csvg width='26' height='26' viewBox='0 0 26 26' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cg opacity='1'%3E%3Cpath d='M23.668 13.7051L11.668 1.70508' stroke='%23B31218' stroke-width='4'/%3E%3Cpath d='M11.668 24.3325L23.668 12.3325' stroke='%23B31218' stroke-width='4'/%3E%3C/g%3E%3C/svg%3E%0A")
+
+      &__text-error
+        display: block
+
   &__wrapper
     display: flex
     justify-content: space-between
@@ -85,18 +98,7 @@
     &:last-child
       margin-bottom: 0
 
-    &._is-error
-      & ^[0]
-        &__input
-          input
-            color: #b31218
-            border-color: #B31218
-
-        &__button-submit
-          background-image: url("data:image/svg+xml,%3Csvg width='26' height='26' viewBox='0 0 26 26' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cg opacity='1'%3E%3Cpath d='M23.668 13.7051L11.668 1.70508' stroke='%23B31218' stroke-width='4'/%3E%3Cpath d='M11.668 24.3325L23.668 12.3325' stroke='%23B31218' stroke-width='4'/%3E%3C/g%3E%3C/svg%3E%0A")
-
-        &__text-error
-          display: block
+    
 
   &__choice-direction
     font-size: 20px
