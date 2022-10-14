@@ -1,21 +1,19 @@
-.news-block
+.multimedia-block
+  background-color: #FAFCFF
 
   &__section
-    padding-top: 60px
-    padding-bottom: 60px
+    padding-top: 128px
+    padding-bottom: 100px
 
     @media (max-width: 767px)
-      padding-top: 30px
-      padding-bottom: 30px
+      padding-top: 65px
+      padding-bottom: 50px
 
   &__head
     display: flex
     align-items: center
     justify-content: space-between
     margin-bottom: 48px
-
-    @media (max-width: 767px)
-      display: none
 
     h3
       font-size: 48px
@@ -68,33 +66,5 @@
     @media (max-width: 639px)
       width: 100%
 
-    .news-thumb
+    .multimedia-thumb
       max-width: 100%
-
-  &__more
-    font-size: 20px
-    color: #A39061
-    font-weight: 600
-    line-height: 1.1
-    letter-spacing: 0.01em
-    text-align: center
-    text-decoration: none
-    width: 100%
-    // margin-top: 30px
-    padding: 27px 20px
-    display: block
-    background-color: #fff
-    transition: color 0.3s, background-color 0.3s
-
-    @media (max-width: 1023px)
-      padding-top: 14px
-      padding-bottom: 14px
-
-    @media (max-width: 767px)
-      font-size: 16px
-      padding-top: 20px
-      padding-bottom: 20px
-
-    &:hover
-      color: #fff
-      background-color: #A39061

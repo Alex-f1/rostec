@@ -1,0 +1,183 @@
+.multimedia-thumb
+  max-width: 416px
+  width: 100%
+
+  @media (max-width: 639px)
+    padding-bottom: 35px
+    border-bottom: 2px solid rgba(141, 141, 139, 0.1)
+
+  &__body
+    width: 100%
+    display: flex
+    flex-direction: column
+
+  &__info
+    display: flex
+    align-items: center
+
+  &__date
+    font-size: 12px
+    color: #101820
+    font-weight: 600
+    line-height: 1.1
+    letter-spacing: 1.6px
+    text-transform: uppercase
+    margin-right: 32px
+    margin-bottom: 15px
+
+    @media (max-width: 639px)
+      margin-bottom: 8px
+
+  &__tags
+    display: flex
+    align-items: center
+    flex-wrap: wrap
+
+  &__tag
+    font-size: 12px
+    color: #101820
+    font-weight: 600
+    line-height: 1.1
+    letter-spacing: 1.6px
+    text-transform: uppercase
+    text-decoration: none
+    margin-right: 15px
+    margin-bottom: 15px
+    transition: color 0.3s
+
+    @media (max-width: 639px)
+      margin-bottom: 8px
+
+    &:hover
+      color: #a39061
+
+    &:last-child
+      margin-right: 0
+
+  &__img-wrapper
+    position: relative
+    margin-bottom: 15px
+
+  &__img
+    display: block
+    overflow: hidden
+    height: 380px
+
+    @media (max-width: 1279px)
+      height: 280px
+
+    @media (max-width: 639px)
+      height: 180px
+      order: 1
+      margin-bottom: 0
+
+    &:hover
+      img
+        transform: scale(1.2)
+
+    img
+      width: 100%
+      height: 100%
+      vertical-align: top
+      object-fit: cover
+      transition: transform 1s, ease 1s
+
+  &__icon
+    font-style: normal
+    position: absolute
+    bottom: 16px
+    left: 16px
+    padding: 10px
+    border-radius: 20px
+    background-color: #fff
+    display: flex
+    align-items: center
+
+    svg
+      flex: 0 0 20px
+      width: 20px
+      max-width: 20px
+
+    span
+      font-size: 12px
+      color: #101820
+      font-weight: 600
+      line-height: 1
+      letter-spacing: 1.6px
+      text-transform: uppercase
+      margin-left: 10px
+
+  &__text
+    font-size: 24px
+    color: #000
+    font-weight: 400
+    line-height: 1.1
+    letter-spacing: 0.16px
+    text-decoration: none
+    transition: color 0.3s
+    margin-bottom: 15px
+
+    @media (max-width: 639px)
+      margin-bottom: 8px
+
+    &:hover
+      color: #a39061
+
+  &__address, &__event
+    font-size: 12px
+    color: #101820
+    font-weight: 600
+    line-height: 15px
+    letter-spacing: 1.6px
+    text-transform: uppercase
+    display: flex
+    align-items: center
+    margin-bottom: 18px
+
+    @media (max-width: 479px)
+      margin-bottom: 12px
+
+    @media (max-width: 374px)
+      font-size: 10px
+
+    &:before
+      content: ''
+      flex: 0 0 20px
+      width: 20px
+      max-width: 20px
+      height: 20px
+      margin-right: 8px
+      background-repeat: no-repeat
+      background-size: contain
+      background-position: 0 0
+
+  &__address
+    &:before
+      background-image: url("data:image/svg+xml,%3Csvg width='20' height='20' viewBox='0 0 20 20' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath fill-rule='evenodd' clip-rule='evenodd' d='M17 7.99988C17 9.95857 16.1955 11.7294 14.899 12.9999H15L10.382 18.539C10.1821 18.7789 9.81365 18.7788 9.61381 18.5389L5 12.9999H5.10102C3.80447 11.7294 3 9.95857 3 7.99988C3 4.13388 6.13401 0.999878 10 0.999878C13.866 0.999878 17 4.13388 17 7.99988ZM10 10.9999C11.6569 10.9999 13 9.65673 13 7.99988C13 6.34302 11.6569 4.99988 10 4.99988C8.34315 4.99988 7 6.34302 7 7.99988C7 9.65673 8.34315 10.9999 10 10.9999Z' fill='%23101820'/%3E%3C/svg%3E%0A")
+
+  &__event
+    &:before
+      background-image: url("data:image/svg+xml,%3Csvg width='20' height='20' viewBox='0 0 20 20' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath fill-rule='evenodd' clip-rule='evenodd' d='M1 2.5C1 1.67157 1.67157 1 2.5 1H17.5C18.3284 1 19 1.67157 19 2.5V17.5C19 18.3284 18.3284 19 17.5 19H2.5C1.67157 19 1 18.3284 1 17.5V2.5ZM3 3V17H17V3H3Z' fill='%23101820'/%3E%3Cpath d='M17 3H3V7H17V3Z' fill='%23101820'/%3E%3Cpath d='M11 9H9V11H11V9Z' fill='%23101820'/%3E%3Cpath d='M15 9H13V11H15V9Z' fill='%23101820'/%3E%3Cpath d='M7 9H5V11H7V9Z' fill='%23101820'/%3E%3Cpath d='M7 13H5V15H7V13Z' fill='%23101820'/%3E%3Cpath d='M11 13H9V15H11V13Z' fill='%23101820'/%3E%3Cpath d='M15 13H13V15H15V13Z' fill='%23101820'/%3E%3C/svg%3E%0A")
+
+  &__button-all
+    font-size: 20px
+    color: #A39061
+    font-weight: 600
+    line-height: 1
+    text-align: center
+    text-decoration: none
+    letter-spacing: 0.16px
+    padding: 25px
+    background-color: #F0F4FA
+    margin-top: 40px
+    display: block
+    transition: background-color 0.3s, color 0.3s
+
+    @media (max-width: 767px)
+      font-size: 16px
+      padding: 20px
+      margin-top: 20px
+
+    &:hover
+      color: #fff
+      background-color: #A39061

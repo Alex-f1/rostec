@@ -6,7 +6,7 @@ function fixedNavDirection() {
     let oldScroll = this.oldScroll || 0;
     let newScroll = this.scrollY;
 
-    if (newScroll >= getPositionNavDirection) {
+    if (newScroll >= getPositionNavDirection + getHeightNavDirection) {
       $('.nav-direction').css('transform', 'translateY(' + -100 + 'px)')
     } else {
       $('.nav-direction').css('transform', 'translateY(' + 0 + 'px)')

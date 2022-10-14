@@ -47,4 +47,9 @@ $(function() {
     $('.footer__language').removeClass('_is-active');
     $('.js-footer-language-selection').removeClass('_is-show');
   });
+
+  const sScrollContainer = document.querySelectorAll('.ss-container');
+  for (var i = 0, len = sScrollContainer.length; i < len; i++) {
+    SimpleScrollbar.initEl(sScrollContainer[i]);
+  }
 });

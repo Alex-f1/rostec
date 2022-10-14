@@ -33,6 +33,99 @@
     visibility: visible
     transform: translate(-50%, 0)
 
+  &--media
+    max-width: 100%
+    top: auto
+    left: auto
+    position: relative
+    opacity: 1
+    visibility: visible
+    transform: none
+    background: #F0F4FA
+    height: auto
+    overflow: hidden
+
+    @media (max-width: 1279px)
+      padding-top: 50px
+      padding-bottom: 25px
+
+    @media (max-width: 959px)
+      padding-right: 0
+      padding-left: 0
+
+    & ^[0]
+      &__button-close
+        display: none
+
+      &__date-nav
+        background-color: #fff
+        padding-left: 16px
+        margin-bottom: 30px
+
+      &__active-year
+        border: 1px solid rgba(0, 0, 0, 0.1)
+
+      &__year-dropdown
+        background: #fff
+
+      &__year
+        color: #101820
+
+      &__month
+        &--no-news
+          color: rgba(16, 24, 32, 0.2)
+
+        &._is-active
+          color: #101820
+
+      &__day-name
+        color: #101820
+
+        &--weekend
+          color: #a39061
+
+      &__cell-day
+        &--dey-another-month
+          color: rgba(16, 24, 32, 0.05)
+
+        &--no-news
+          color: rgba(16, 24, 32, 0.2)
+
+        &._is-active
+          pointer-events: all
+
+          &._is-selected-date
+            color: #a39061
+
+            span
+              &:after
+                background-color: #a39061
+
+            &:after
+              opacity: 1
+              visibility: visible
+              background-image: url("data:image/svg+xml,%3Csvg width='130' height='130' viewBox='0 0 130 130' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M1 44.2391V1.00049H43.8954L51.1877 8.29271H78.555L85.8472 1.00049H129V44.2391L120.936 52.3034V78.2123L129 86.2766V129H85.8472L78.555 121.708H51.1877L43.8954 129H1V86.2766L9.06434 78.2123V52.3034L1 44.2391Z' stroke='%23A39061'/%3E%3C/svg%3E%0A")
+
+          &:hover
+            color: #a39061
+
+            span
+              &:after
+                background-color: #a39061
+
+          &:after
+            background-image: url("data:image/svg+xml,%3Csvg width='128' height='128' viewBox='0 0 128 128' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M0 43.2391V0.000488281H42.8954L50.1877 7.29271H77.555L84.8472 0.000488281H128V43.2391L119.936 51.3034V77.2123L128 85.2766V128H84.8472L77.555 120.708H50.1877L42.8954 128H0V85.2766L8.06434 77.2123V51.3034L0 43.2391Z' fill='%23A39061'/%3E%3C/svg%3E%0A")
+
+        &._is-selected-date
+          &:after
+            opacity: 1
+            visibility: visible
+            background-image: url("data:image/svg+xml,%3Csvg width='130' height='130' viewBox='0 0 130 130' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M1 44.2391V1.00049H43.8954L51.1877 8.29271H78.555L85.8472 1.00049H129V44.2391L120.936 52.3034V78.2123L129 86.2766V129H85.8472L78.555 121.708H51.1877L43.8954 129H1V86.2766L9.06434 78.2123V52.3034L1 44.2391Z' stroke='%23A39061'/%3E%3C/svg%3E%0A")
+
+        &:hover
+          &:after
+            background-image: url("data:image/svg+xml,%3Csvg width='130' height='130' viewBox='0 0 130 130' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M1 44.2391V1.00049H43.8954L51.1877 8.29271H78.555L85.8472 1.00049H129V44.2391L120.936 52.3034V78.2123L129 86.2766V129H85.8472L78.555 121.708H51.1877L43.8954 129H1V86.2766L9.06434 78.2123V52.3034L1 44.2391Z' stroke='%23A39061'/%3E%3C/svg%3E%0A")
+
   &__button-close
     width: 28px
     height: 28px
@@ -66,6 +159,8 @@
   &__date-nav
     display: flex
     align-items: center
+    padding-top: 16px
+    // padding-bottom: 16px
     margin-bottom: 15px
 
   &__years
@@ -166,6 +261,10 @@
       font-size: 12px
       margin-right: 15px
 
+    &--no-news
+      color: rgba(255, 255, 255, 0.2)
+      pointer-events: none
+
     &:hover
       color: #8f8f8c
 
@@ -197,6 +296,9 @@
     @media (max-width: 767px)
       font-size: 18px
       padding-left: 15px
+
+    &--weekend
+      color: #A39061
 
   &__cells-days
     display: flex
@@ -284,6 +386,7 @@
 
     span
       position: relative
+      z-index: 2
 
       &:after
         content: ''
@@ -320,3 +423,192 @@
       span
         &:after
           display: none
+
+.popup-news-day
+  position: absolute
+  top: 0
+  right: 0
+  max-width: 540px
+  width: 100%
+  height: 100%
+  background-color: #fff
+  box-shadow: -10px 0px 24px rgba(16, 24, 32, 0.1)
+  z-index: 5
+  padding: 48px 0
+  opacity: 0
+  overflow: hidden
+  visibility: hidden
+  transition: opacity 0.3s, ease 0.3s
+
+  @media (max-width: 767px)
+    padding-right: 25px
+    padding-left: 25px
+    width: 100%
+
+  &._is-show
+    opacity: 1
+    visibility: visible
+
+  &__button-close
+    width: 27px
+    height: 27px
+    border: none
+    background-color: transparent
+    background-image: url("data:image/svg+xml,%3Csvg width='27' height='27' viewBox='0 0 27 27' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Crect y='25.4561' width='36' height='2' transform='rotate(-45 0 25.4561)' fill='%23A39061'/%3E%3Crect x='25.4561' y='26.8701' width='36' height='2' transform='rotate(-135 25.4561 26.8701)' fill='%23A39061'/%3E%3C/svg%3E%0A")
+    background-repeat: no-repeat
+    background-position: 0 0
+    background-size: contain
+    display: block
+    margin-left: auto
+    margin-right: 48px
+    cursor: pointer
+
+    @media (max-width: 767px)
+      margin-right: 0
+
+  &__inner
+    padding-top: 50px
+
+    @media (max-width: 767px)
+      padding-top: 25px
+
+  &__title-date
+    font-weight: 600
+    font-size: 48px
+    line-height: 1
+    letter-spacing: 0.16px
+    color: #101820
+    max-width: 445px
+    width: 100%
+    padding-bottom: 30px
+    margin-left: auto
+    margin-right: auto
+    border-bottom: 2px solid #101820
+
+    @media (max-width: 767px)
+      max-width: 100%
+
+    @media (max-width: 767px)
+      font-size: 38px
+      padding-bottom: 15px
+
+  &__items
+    height: 680px
+    overflow-y: auto
+    padding-right: 48px
+    padding-left: 48px
+
+    @media (max-width: 959px)
+      height: 450px
+
+    @media (max-width: 767px)
+      padding-right: 0
+      padding-left: 0
+
+    @media (max-width: 479px)
+      height: 280px
+
+    &.ss-container
+      // border-right 6px solid #D2D2CA
+      .ss-content
+        overflow-x: hidden !important
+
+      .ss-scroll
+        width: 6px
+        background: #8F8F8C
+        // transform: translateX(2px)
+        opacity: 1 !important
+        height: 50%
+        top: 0%
+        border-radius: 0
+        right: -485px !important
+        display: block !important
+
+        // transition height .3s
+        @media (max-width: 767px)
+          right: -98.5% !important
+
+        @media (max-width: 479px)
+          width: 4px
+
+  &__item
+    padding-top: 30px
+    padding-bottom: 30px
+
+    @media (max-width: 767px)
+      max-width: 420px
+
+    @media (max-width: 479px)
+      max-width: 290px
+      padding-top: 15px
+      padding-bottom: 15px
+
+    @media (max-width: 374px)
+      max-width: 255px
+
+    &:last-child
+      margin-bottom: 0
+
+  &__name
+    font-size: 32px
+    color: #A39061
+    font-weight: 400
+    line-height: 1.2
+    letter-spacing: 0.16px
+    margin-bottom: 10px
+    text-decoration: none
+    display: block
+
+    @media (max-width: 767px)
+      font-size: 28px
+
+    @media (max-width: 479px)
+      font-size: 22px
+      margin-bottom: 5px
+
+    @media (max-width: 374px)
+      font-size: 18px
+
+  &__text
+    font-size: 16px
+    color: #101820
+    font-weight: 400
+    line-height: 1.1
+    letter-spacing: 0.16px
+    margin-bottom: 10px
+
+    @media (max-width: 479px)
+      margin-bottom: 5px
+
+  &__address, &__event
+    font-weight: 600
+    font-size: 12px
+    line-height: 15px
+    letter-spacing: 1.6px
+    text-transform: uppercase
+    color: #101820
+    display: flex
+    align-items: center
+    margin-bottom: 10px
+
+    @media (max-width: 479px)
+      margin-bottom: 5px
+
+    &:before
+      content: ''
+      flex: 0 0 20px
+      width: 20px
+      max-width: 20px
+      height: 20px
+      margin-right: 8px
+      background-repeat: no-repeat
+      background-size: contain
+      background-position: 0 0
+
+  &__address
+    &:before
+      background-image: url("data:image/svg+xml,%3Csvg width='20' height='20' viewBox='0 0 20 20' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath fill-rule='evenodd' clip-rule='evenodd' d='M17 7.99988C17 9.95857 16.1955 11.7294 14.899 12.9999H15L10.382 18.539C10.1821 18.7789 9.81365 18.7788 9.61381 18.5389L5 12.9999H5.10102C3.80447 11.7294 3 9.95857 3 7.99988C3 4.13388 6.13401 0.999878 10 0.999878C13.866 0.999878 17 4.13388 17 7.99988ZM10 10.9999C11.6569 10.9999 13 9.65673 13 7.99988C13 6.34302 11.6569 4.99988 10 4.99988C8.34315 4.99988 7 6.34302 7 7.99988C7 9.65673 8.34315 10.9999 10 10.9999Z' fill='%23101820'/%3E%3C/svg%3E%0A")
+
+  &__event
+    &:before
+      background-image: url("data:image/svg+xml,%3Csvg width='20' height='20' viewBox='0 0 20 20' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath fill-rule='evenodd' clip-rule='evenodd' d='M1 2.5C1 1.67157 1.67157 1 2.5 1H17.5C18.3284 1 19 1.67157 19 2.5V17.5C19 18.3284 18.3284 19 17.5 19H2.5C1.67157 19 1 18.3284 1 17.5V2.5ZM3 3V17H17V3H3Z' fill='%23101820'/%3E%3Cpath d='M17 3H3V7H17V3Z' fill='%23101820'/%3E%3Cpath d='M11 9H9V11H11V9Z' fill='%23101820'/%3E%3Cpath d='M15 9H13V11H15V9Z' fill='%23101820'/%3E%3Cpath d='M7 9H5V11H7V9Z' fill='%23101820'/%3E%3Cpath d='M7 13H5V15H7V13Z' fill='%23101820'/%3E%3Cpath d='M11 13H9V15H11V13Z' fill='%23101820'/%3E%3Cpath d='M15 13H13V15H15V13Z' fill='%23101820'/%3E%3C/svg%3E%0A")

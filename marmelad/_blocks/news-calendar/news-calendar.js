@@ -21,3 +21,20 @@ function newsCalendar() {
 
 newsCalendar();
 
+function popupNewsDay() {
+
+  if (window.matchMedia("(min-width: 1024px)").matches) {
+    $('.popup-news-day').addClass('_is-show');
+  } 
+  $('.news-calendar--media .news-calendar__cell-day').on('click', function () {
+    $(this).addClass('_is-selected-date').siblings().removeClass('_is-selected-date');
+    $('.popup-news-day').addClass('_is-show');
+  })
+
+  $('.js-popup-news-day-button-close').on('click', function () {
+    $('.popup-news-day').removeClass('_is-show');
+    $('.news-calendar--media .news-calendar__cell-day').removeClass('_is-selected-date');
+  })
+}
+
+popupNewsDay();
