@@ -19,6 +19,8 @@ function sortNews() {
     let newsCategory = $(this).data('category');
 
     $('.js-choice-category > span').html(newsCategory);
+    $('.js-choice-category').removeClass('_is-active');
+    $('.js-news-categories').removeClass('_is-show');
 
   });
 
