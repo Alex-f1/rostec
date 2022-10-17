@@ -1,0 +1,398 @@
+.news-list
+  background-color: #FAFCFF
+  overflow: hidden
+
+  &__section
+    padding-top: 128px
+    padding-bottom: 60px
+
+    @media (max-width: 1279px)
+      padding-top: 60px
+      padding-bottom: 30px
+
+  &__head
+    display: flex
+    align-items: center
+    justify-content: space-between
+    margin-bottom: 30px
+
+    @media (max-width: 767px)
+      display: none
+
+    h2
+      font-size: 64px
+      color: #101820
+      font-weight: 700
+      line-height: 1.1
+      letter-spacing: -0.16px
+      margin: 0
+      max-width: 740px
+      width: 100%
+
+      @media (max-width: 767px)
+        font-size: 24px
+
+      @media (max-width: 374px)
+        font-size: 20px
+
+  &__items
+    display: flex
+    flex-wrap: wrap
+    margin-left: -30px
+
+  &__item
+    width: 33.333%
+    padding-left: 30px
+    padding-bottom: 80px
+
+    @media (max-width: 959px)
+      width: 50%
+
+    @media (max-width: 639px)
+      width: 100%
+      padding-bottom: 40px
+
+    .news-thumb
+      max-width: 100%
+
+  &__more
+    font-size: 20px
+    color: #A39061
+    font-weight: 600
+    line-height: 1.1
+    letter-spacing: 0.01em
+    text-align: center
+    text-decoration: none
+    width: 100%
+    // margin-top: 30px
+    padding: 27px 20px
+    display: block
+    background-color: #fff
+    transition: color 0.3s, background-color 0.3s
+
+    @media (max-width: 1023px)
+      padding-top: 14px
+      padding-bottom: 14px
+
+    @media (max-width: 767px)
+      font-size: 16px
+      padding-top: 20px
+      padding-bottom: 20px
+
+    &:hover
+      color: #fff
+      background-color: #A39061
+
+.sorting-panel
+  margin-bottom: 40px
+
+  &__container
+    display: flex
+    align-items: center
+    width: 100%
+
+    @media (max-width: 767px)
+      flex-wrap: wrap
+
+  &__search
+    width: 100%
+    margin-right: 40px
+
+    @media (max-width: 767px)
+      margin-right: 0
+      margin-bottom: 15px
+
+  &__field
+    width: 100%
+    position: relative
+
+    input
+      font-size: 20px
+      color: #101820
+      font-weight: 400
+      line-height: 1
+      letter-spacing: 0.16px
+      width: 100%
+      height: 48px
+      border: none
+      background-color: transparent
+      border-bottom: 3px solid #101820
+      padding: 8px 35px 8px 8px
+      outline: none
+
+  &__button-search
+    width: 25px
+    height: 25px
+    position: absolute
+    top: 10px
+    right: 8px
+    border: none
+    padding: 0
+    background-color: transparent
+    background-image: url("data:image/svg+xml, %3Csvg width='25' height='25' viewBox='0 0 25 25' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Ccircle cx='10.75' cy='10.75' r='8.75004' stroke='%23101820' stroke-width='3'/%3E%3Cpath d='M16.875 16.875L23 23' stroke='%23101820' stroke-width='3'/%3E%3C/svg%3E")
+    background-repeat: no-repeat
+    background-position: 0 0
+    background-size: contain
+    cursor: pointer
+    transition: background 0.3s
+
+    &:hover
+      background-image: url("data:image/svg+xml, %3Csvg width='25' height='25' viewBox='0 0 25 25' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Ccircle cx='10.75' cy='10.75' r='8.75004' stroke='%23A39061' stroke-width='3'/%3E%3Cpath d='M16.875 16.875L23 23' stroke='%23A39061' stroke-width='3'/%3E%3C/svg%3E")
+
+  &__date
+    margin-right: 30px
+
+    input
+      cursor: pointer
+      position: relative
+      z-index: 2
+
+    i
+      width: 24px
+      height: 24px
+      display: block
+      position: absolute
+      top: 10px
+      right: 8px
+      background-repeat: no-repeat
+      background-position: 0 0
+      background-size: contain
+      background-image: url("data:image/svg+xml,%3Csvg width='24' height='24' viewBox='0 0 24 24' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Crect x='1.5' y='-1.5' width='17' height='14' transform='matrix(1 0 0 -1 2 19)' stroke='%23101820' stroke-width='3'/%3E%3Crect x='4' y='3' width='3' height='3' fill='%23101820'/%3E%3Crect x='5' y='7' width='14' height='3' fill='%23101820'/%3E%3Crect x='17' y='3' width='3' height='3' fill='%23101820'/%3E%3Crect x='14' y='14' width='3' height='3' fill='%23101820'/%3E%3C/svg%3E%0A")
+      z-index: 1
+
+  &__date, &__categories
+    flex: 0 0 192px
+    width: 192px
+    max-width: 192px
+
+    @media (max-width: 767px)
+      flex: 1 1 auto
+      max-width: 100%
+
+    @media (max-width: 540px)
+      flex: none
+      width: 100%
+      margin-bottom: 15px
+
+  &__choice-categories
+    font-size: 20px
+    color: #101820
+    font-weight: 400
+    line-height: 1.25
+    letter-spacing: 0.16px
+    display: flex
+    align-items: center
+    padding: 10px 8px
+    cursor: pointer
+    border-bottom: 3px solid #101820
+    transition: background-color 0.3s, ease 0.3s
+
+    span
+      overflow: hidden
+      text-overflow: ellipsis
+      vertical-align: bottom
+      white-space: nowrap
+      margin-right: 10px
+
+    i
+      flex: 0 0 24px
+      width: 24px
+      max-width: 24px
+      height: 24px
+      margin-left: auto
+      background-repeat: no-repeat
+      background-position: 0 0
+      background-size: contain
+
+  &__choice-categories
+    i
+      background-image: url("data:image/svg+xml,%3Csvg width='24' height='24' viewBox='0 0 24 24' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M3 12H21' stroke='%23101820' stroke-width='3'/%3E%3Cpath d='M12 3L12 21' stroke='%23101820' stroke-width='3'/%3E%3C/svg%3E%0A")
+      transition: background 0.3s, ease 0.3s
+
+    @media (max-width: 374px)
+      font-size: 16px
+
+    &._is-active
+      background-color: #fff
+
+      i
+        background-image: url("data:image/svg+xml,%3Csvg width='24' height='24' viewBox='0 0 24 24' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M22 7L12 17L2 7' stroke='black' stroke-width='3'/%3E%3C/svg%3E%0A")
+
+  &__categories-list
+    width: 268px
+    background-color: #fff
+    position: absolute
+    top: 100%
+    left: 0
+    opacity: 0
+    visibility: hidden
+    transform: translateY(-10px)
+    z-index: 4
+    transition: opacity 0.3s, transform 0.3s, ease 0.3s
+
+    @media (min-width: 768px) and (max-width: 1439px)
+      left: -75px
+
+    @media (max-width: 767px)
+      width: 100%
+
+    &._is-show
+      opacity: 1
+      visibility: visible
+      transform: translateY(0)
+
+    ul
+      list-style: none
+      padding-left: 0
+      margin: 0
+
+      li
+        font-size: 20px
+        color: #101820
+        font-weight: 400
+        line-height: 1.1
+        letter-spacing: 0.16px
+        display: flex
+        align-items: center
+        padding: 12px 10px
+        border-bottom: 1px solid rgba(183, 183, 183, 0.3)
+        cursor: pointer
+        transition: background 0.3s
+
+        @media (max-width: 374px)
+          font-size: 16px
+          padding-top: 10px
+          padding-bottom: 10px
+
+        &:before
+          content: ''
+          flex: 0 0 23px
+          width: 23px
+          max-width: 23px
+          height: 17px
+          background-image: url("data:image/svg+xml,%3Csvg width='23' height='17' viewBox='0 0 23 17' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M21 2L9 14L2 7' stroke='%23101820' stroke-width='3'/%3E%3C/svg%3E%0A")
+          background-repeat: no-repeat
+          background-size: contain
+          background-position: 0 0
+          margin-right: 18px
+          opacity: 0
+          visibility: hidden
+          transition: opacity 0.3s, ease 0.3s
+
+          @media (max-width: 374px)
+            flex: 0 0 16px
+            width: 16px
+            max-width: 16px
+            height: 12px
+            margin-right: 10px
+
+        &._is-checked
+          &:before
+            opacity: 1
+            visibility: visible
+
+        &:hover
+          @media (min-width: 1025px)
+            background: linear-gradient(0deg, rgba(3, 55, 107, 0.1), rgba(3, 55, 107, 0.1)), #FFFFFF
+
+.air-datepicker
+  width: 320px
+  height: 320px
+  padding: 8px
+  margin-top: -10px
+  border: none
+  border-radius: 0
+  background: #fff
+
+  @media (max-width: 374px)
+    width: 254px
+
+.air-datepicker--pointer
+  display: none
+
+.air-datepicker-nav
+  border-bottom: none
+
+.air-datepicker-nav--action
+  border-radius: 18px
+  transition: background 0.3s
+
+  path
+    stroke: #101820
+    transition: stroke 0.3s
+
+  &:hover
+    background: #a39061
+
+    path
+      stroke: #fff
+
+.air-datepicker-nav--title
+  font-size: 16px
+  color: #101820
+  font-weight: 400
+  line-height: 1
+  text-align: center
+  letter-spacing: 0.16px
+  transition: background 0.3s, color 0.3s
+
+  &:hover
+    color: #fff
+    background: #a39061
+
+    i
+      color: #fff
+
+  i
+    color: #101820
+    transition: color 0.3s
+
+.air-datepicker-body--day-name
+  width: 36px
+  font-size: 16px
+  color: #101820
+  line-height: 1
+  letter-spacing: 0.16px
+  margin-bottom: 5px
+
+  &.-weekend-
+    color: #b31218
+
+.air-datepicker-body--cells
+  grid-auto-rows: auto !important
+
+.air-datepicker-cell
+  font-size: 16px
+  color: #101820
+  line-height: 1
+  letter-spacing: 0.16px
+  border-radius: 18px
+  width: 36px
+  height: 36px
+  margin-bottom: 4px
+  transition: background 0.3s, color 0.3s
+
+  &.-weekend-
+    color: #b31218
+
+  &.-current-
+    color: #fff
+    background: #a39061
+
+  &.-focus-
+    background: rgba(3, 55, 107, 0.1)
+
+  &.-other-month-
+    color: #8F8F8C
+
+  &.-selected-
+    color: #101820
+    background: rgba(3, 55, 107, 0.1)
+
+    &.-current-
+      color: #fff
+      background: #a39061
+
+    &.-focus-
+      color: #101820
+      background: rgba(3, 55, 107, 0.1)

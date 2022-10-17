@@ -1,0 +1,45 @@
+= yaml =
+pageTitle: Новости
+bodyClasses:
+layout: !!map
+  header: true
+  footer: true
+  left: false
+  right: false
+= yaml =
+
+{% extends 'app.html' %}
+
+
+{% block main %}
+
+  <div block="inner-header">
+    <div elem="section">
+      <div block="nav-direction">
+        <div elem="section">
+          <div elem="panel">
+            <div elem="inner" class="contain">
+              <div block="direction-name" mods="news">
+                <div elem="section">
+                  <h3>Медиа</h3>
+                </div>
+              </div><!-- direction-name -->
+              <nav elem="nav">
+                <ul>
+                  <li class="_is-active"><a href="#">Новости</a></li>
+                  <li><a href="#">Календарь событий</a></li>
+                  <li><a href="#">Мультимедиа</a></li>
+                </ul>
+              </nav>
+            </div>
+          </div>
+        </div>
+      </div><!-- nav-direction -->
+    </div>
+  </div><!-- inner-header -->
+
+  {% include "news-list.html" %}
+
+  {% include "subscribe-news.html" %}
+
+{% endblock %}
