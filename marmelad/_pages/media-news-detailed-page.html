@@ -1,5 +1,5 @@
 = yaml =
-pageTitle: Двигатели ОДК обеспечили успешный старт ракеты «Союз-2.1б»
+pageTitle: Медиа
 bodyClasses:
 layout: !!map
   header: true
@@ -37,5 +37,31 @@ layout: !!map
       </div><!-- nav-direction -->
     </div>
   </div><!-- inner-header -->
+
+  {% include "media-news-detailed.html" %}
+
+  <div block="media-news-single">
+    <div elem="body" class="contain">
+      <div elem="links">
+        <a href="#">Следующая новость</a>
+      </div>
+      <div elem="content">
+        <div elem="info">
+          <div elem="date">
+            <span>02.06</span>
+            <span>16:53</span>
+          </div>
+          <a elem="name" href="#">
+            Соосная схема: визитная карточка Камова
+          </a>
+          <div elem="tags">
+            <a elem="tag" href="#"># авиация</a>
+            <a elem="tag" href="#"># ОДК-Кузнецов</a>
+          </div>
+        </div>
+        <a elem="img" href="#"><img src="img/media-news-single-img2.jpg" alt=""></a>
+      </div>
+    </div>
+  </div><!-- media-news-single -->
 
 {% endblock %}

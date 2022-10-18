@@ -1,0 +1,119 @@
+.media-news-detailed
+  &__section
+    padding-bottom: 150px
+
+    @media (max-width: 1279px)
+      padding-bottom: 75px
+
+  &__container
+    padding-top: 80px
+    display: flex
+
+    @media (max-width: 639px)
+      display: block
+
+  &__content
+    h3
+      font-size: 32px
+      color: #101820
+      font-weight: 400
+      line-height: 1.1
+      letter-spacing: 0.16px
+      margin-top: 0
+      margin-bottom: 30px
+
+      @media (max-width: 959px)
+        font-size: 26px
+        margin-bottom: 15px
+
+      @media (max-width: 767px)
+        font-size: 24px
+
+    p
+      font-size: 20px
+      color: #101820
+      font-weight: 400
+      line-height: 1.1
+      letter-spacing: 0.16px
+      margin-top: 0
+      margin-bottom: 30px
+
+      @media (max-width: 959px)
+        font-size: 16px
+        margin-bottom: 15px
+
+.other-news
+  flex: 0 0 305px
+  width: 305px
+  max-width: 305px
+  margin-right: 145px
+
+  @media (max-width: 1279px)
+    margin-right: 50px
+
+  @media (max-width: 767px)
+    flex: 0 0 250px
+    width: 250px
+    max-width: 250px
+    margin-right: 25px
+
+  @media (max-width: 639px)
+    margin-bottom: 50px
+    width: 100%
+    max-width: 100%
+
+  &__items
+    height: 375px
+
+    @media (max-width: 959px)
+      height: 250px
+
+    &.ss-container
+      border-right: 2px solid #A39061
+
+      .ss-content
+        overflow-x: hidden !important
+
+      .ss-scroll
+        width: 2px
+        background: #101820
+        // transform: translateX(2px)
+        opacity: 1 !important
+        height: 50%
+        top: 0%
+        border-radius: 0
+        right: -100% !important
+        display: block !important
+
+  &__item
+    max-width: 280px
+    margin-bottom: 35px
+
+    @media (max-width: 767px)
+      max-width: 230px
+
+    @media (max-width: 639px)
+      max-width: 100%
+      padding-right: 50px
+
+  &__date
+    font-size: 12px
+    color: #101820
+    font-weight: 600
+    line-height: 1.1
+    letter-spacing: 1.6px
+    text-transform: uppercase
+    margin-bottom: 8px
+
+  &__name
+    font-size: 16px
+    color: #A39061
+    font-weight: 400
+    line-height: 1.1
+    letter-spacing: 0.16px
+    text-decoration: none
+    display: block
+    transition: color 0.3s
+
+    &:hover
+      color: #101820
