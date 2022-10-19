@@ -7,26 +7,27 @@ function fixedNavDirection() {
     let newScroll = this.scrollY;
 
     if (newScroll >= getPositionNavDirection + getHeightNavDirection) {
-      $('.nav-direction').css('transform', 'translateY(' + -100 + 'px)')
+      $('.nav-direction').css('transform', 'translateY(' + -100 + 'px)');
     } else {
-      $('.nav-direction').css('transform', 'translateY(' + 0 + 'px)')
+      $('.nav-direction').css('transform', 'translateY(' + 0 + 'px)');
     }
 
     if (newScroll < oldScroll) {
-      $('.nav-direction').css('transform', 'translateY(' + 0 + 'px)')
+      $('.nav-direction').css('transform', 'translateY(' + 0 + 'px)');
       $('.nav-direction').addClass('_is-fixed');
       $('.inner-header').css('padding-top', getHeightNavDirection)
-    } else {
+    }
+    /* else {
       $('.nav-direction').removeClass('_is-fixed');
       $('.inner-header').css('padding-top', 0)
-    }
+    } */
 
     this.oldScroll = newScroll;
 
-    if (newScroll >= oldScroll) {
+    /* if (newScroll >= oldScroll) {
       $('.nav-direction').removeClass('_is-fixed');
       $('.inner-header').css('padding-top', 0)
-    }
+    } */
 
     if (newScroll <= getPositionNavDirection) {
       $('.nav-direction').removeClass('_is-fixed');
