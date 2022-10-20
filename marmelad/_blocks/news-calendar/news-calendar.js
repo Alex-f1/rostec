@@ -23,7 +23,7 @@ newsCalendar();
 
 function popupNewsDay() {
 
-  if (window.matchMedia("(min-width: 1024px)").matches) {
+  if (window.matchMedia("(min-width: 1024px)").matches && !$('.calendar-page').length) {
     $('.popup-news-day').addClass('_is-show');
   } 
   $('.news-calendar--media .news-calendar__cell-day').on('click', function () {

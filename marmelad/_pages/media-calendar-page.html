@@ -27,7 +27,7 @@ layout: !!map
               <nav elem="nav">
                 <ul>
                   <li><a href="#">Новости</a></li>
-                  <li><a href="#">Календарь событий</a></li>
+                  <li class="_is-active"><a href="#">Календарь событий</a></li>
                   <li><a href="#">Мультимедиа</a></li>
                 </ul>
               </nav>
@@ -38,75 +38,7 @@ layout: !!map
     </div>
   </div><!-- inner-header -->
 
-  <div block="news-block">
-    <div elem="section">
-      <div elem="inner" class="contain">
-        <div elem="head">
-          <h3>Последние новости</h3>
-          <a elem="all" href="#">Все новости</a>
-        </div>
-        <div elem="items">
-          <div elem="item">
-            <div block="news-thumb">
-              <div elem="body">
-                <div elem="info">
-                  <div elem="date">02.06</div>
-                  <div elem="tags">
-                    <a elem="tag" href="#"># ПМЭФ</a>
-                  </div>
-                </div>
-                <a elem="img" href="#">
-                  <img src="img/news-thumb-img.jpg" alt="">
-                </a>
-                <a elem="text" href="#">
-                  Новикомбанк профинансирует инфраструктурные проекты «Росэлектроники»
-                </a>
-              </div>
-            </div><!-- news-thumb -->
-          </div>
-          <div elem="item">
-            <div block="news-thumb">
-              <div elem="body">
-                <div elem="info">
-                  <div elem="date">02.06</div>
-                  <div elem="tags">
-                    <a elem="tag" href="#"># ПМЭФ</a>
-                  </div>
-                </div>
-                <a elem="img" href="#">
-                  <img src="img/news-thumb-img2.jpg" alt="">
-                </a>
-                <a elem="text" href="#">
-                  На предприятиях «Росэлектроники» будет внедрена национальная инжиниринговая платформа
-                </a>
-              </div>
-            </div><!-- news-thumb -->
-          </div>
-          <div elem="item">
-            <div block="news-thumb">
-              <div elem="body">
-                <div elem="info">
-                  <div elem="date">02.06</div>
-                  <div elem="tags">
-                    <a elem="tag" href="#"># ПМЭФ</a>
-                  </div>
-                </div>
-                <a elem="img" href="#">
-                  <img src="img/news-thumb-img3.jpg" alt="">
-                </a>
-                <a elem="text" href="#">
-                  Ростех разработал портативную РЛС для объектов критически важной инфраструктуры
-                </a>
-              </div>
-            </div><!-- news-thumb -->
-          </div>
-        </div>
-      </div>
-    </div>
-    <a elem="more" href="#">Показать больше</a>
-  </div><!-- news-block -->
-
-  <div block="news-calendar" mods="media">
+  <div block="news-calendar" mods="media" class="calendar-page">
     <button elem="button-close" class="js-button-close" type="button"></button>
     <div elem="section">
       <div elem="inner" class="contain">
@@ -222,7 +154,73 @@ layout: !!map
     </div><!-- popup-news-day -->
   </div><!-- news-calendar -->
 
-  {% include "multimedia-block.html" %}
+  <div block="news-block">
+    <div elem="section">
+      <div elem="inner" class="contain">
+        <div elem="head">
+          <h3>Прошедшие события</h3>
+          <a elem="all" href="#">Все новости</a>
+        </div>
+        <div elem="items">
+          <div elem="item">
+            <div block="news-thumb">
+              <div elem="body">
+                <div elem="info">
+                  <div elem="date">02.06</div>
+                  <div elem="tags">
+                    <a elem="tag" href="#"># ПМЭФ</a>
+                  </div>
+                </div>
+                <a elem="img" href="#">
+                  <img src="img/news-thumb-img.jpg" alt="">
+                </a>
+                <a elem="text" href="#">
+                  Новикомбанк профинансирует инфраструктурные проекты «Росэлектроники»
+                </a>
+              </div>
+            </div><!-- news-thumb -->
+          </div>
+          <div elem="item">
+            <div block="news-thumb">
+              <div elem="body">
+                <div elem="info">
+                  <div elem="date">02.06</div>
+                  <div elem="tags">
+                    <a elem="tag" href="#"># ПМЭФ</a>
+                  </div>
+                </div>
+                <a elem="img" href="#">
+                  <img src="img/news-thumb-img2.jpg" alt="">
+                </a>
+                <a elem="text" href="#">
+                  На предприятиях «Росэлектроники» будет внедрена национальная инжиниринговая платформа
+                </a>
+              </div>
+            </div><!-- news-thumb -->
+          </div>
+          <div elem="item">
+            <div block="news-thumb">
+              <div elem="body">
+                <div elem="info">
+                  <div elem="date">02.06</div>
+                  <div elem="tags">
+                    <a elem="tag" href="#"># ПМЭФ</a>
+                  </div>
+                </div>
+                <a elem="img" href="#">
+                  <img src="img/news-thumb-img3.jpg" alt="">
+                </a>
+                <a elem="text" href="#">
+                  Ростех разработал портативную РЛС для объектов критически важной инфраструктуры
+                </a>
+              </div>
+            </div><!-- news-thumb -->
+          </div>
+        </div>
+      </div>
+    </div>
+    <a elem="more" href="#">Показать больше</a>
+  </div><!-- news-block -->
 
   {% include "subscribe-news.html" %}
 
