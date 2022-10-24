@@ -1,4 +1,12 @@
 .media-news-detailed
+
+  .other-news
+
+    @media (min-width: 1280px)
+      position: sticky
+      top: 15px
+      align-self: flex-start
+
   &__section
     padding-bottom: 150px
 
@@ -8,26 +16,54 @@
   &__container
     padding-top: 80px
     display: flex
+    position: relative;
 
-    @media (max-width: 639px)
+    @media (max-width: 1023px)
       display: block
 
   &__content
-    h3
-      font-size: 32px
+    h1, h2, h3, h4, h5, h6
       color: #101820
-      font-weight: 400
+      font-weight: 600
       line-height: 1.1
       letter-spacing: 0.16px
       margin-top: 0
       margin-bottom: 30px
 
+    h2
+      font-size: 48px;  
+
+      @media (max-width: 767px)
+        font-size 32px
+
+      @media (max-width: 374px)
+        font-size 28px
+    h3
+      font-size: 32px
+      
       @media (max-width: 959px)
         font-size: 26px
         margin-bottom: 15px
 
       @media (max-width: 767px)
         font-size: 24px
+
+    h4
+      font-size: 28px
+
+      @media (max-width: 767px)
+        font-size 20px
+
+    h5
+      font-size: 18px      
+      font-weight: 700
+
+      @media (max-width: 767px)
+        font-size 16px
+
+    h6
+      font-size: 14px
+      font-weight: 700
 
     p
       font-size: 20px
@@ -37,27 +73,186 @@
       letter-spacing: 0.16px
       margin-top: 0
       margin-bottom: 30px
+      &:last-child
+        margin-bottom 0
 
       @media (max-width: 959px)
         font-size: 16px
         margin-bottom: 15px
+
+    ul, ol
+      padding-left: 30px
+      margin-top 0
+      margin-bottom 30px
+
+    ol
+      li
+        font-size: 16px
+        color: #8F8F8C
+        line-height: 1
+        letter-spacing: 0.16px
+        margin-bottom 15px  
+        padding-left 5px
+
+  &__img-content
+    margin-bottom 30px
+
+    @media (min-width: 1600px)
+      margin-right -100px
+
+    @media (min-width: 1280px)  
+      float: right 
+      margin-left 40px
+
+    img
+      vertical-align: top
+
+    span
+      font-size: 12px
+      color: #101820
+      font-weight: 400
+      line-height: 15px
+      letter-spacing: 0.16px
+      display block
+      margin-top 15px
+
+  &__img-info
+    padding 30px
+    background-color: #F0F4FA;    
+    vertical-align top
+    margin-bottom 30px
+
+    img
+      vertical-align top
+
+    span
+      font-size: 12px
+      color: #101820
+      font-weight: 400
+      line-height: 15px
+      letter-spacing: 0.16px
+      display block
+      margin-top 15px
+
+  table
+    width: 100%
+    border-spacing: 4px
+    border-collapse: separate
+    margin-bottom: 35px
+
+    tr
+      td, th
+        padding: 10px
+        word-break: break-all
+
+        @media (max-width: 767px)
+          padding 5px
+
+      th
+        font-size: 18px
+        color: #000
+        font-weight: 700
+        line-height: 1.1
+        letter-spacing: 1.44px
+        text-transform: uppercase
+        text-align: left
+        border-bottom: 2px solid #000000
+
+        @media (max-width: 767px)
+          font-size: 12px
+          
+      td
+        font-size: 16px
+        color: #101820
+        font-weight: 400
+        line-height: 1
+        letter-spacing: 0.16px
+
+        @media (max-width: 767px)
+          font-size: 12px
+
+    tbody
+
+      tr
+        &:nth-child(odd) 
+          td
+            background-color: #FAFCFF     
+        &:nth-child(even)
+          td
+            background-color: #F0F4FA   
+
+  &__quote
+    text-align center
+    padding: 30px 24px
+    border-left: none
+    background-color: #F5F8FA     
+    margin 0 0 30px 0    
+
+    p
+      max-width 675px + 50px + 50px
+      width 100%
+      margin-right auto
+      margin-left auto
+      position relative
+      padding-right 50px
+      padding-left 50px
+      &:before, &:after
+        content: ''
+        font-size: 64px
+        font-weight: 700
+        line-height: 0.8
+        letter-spacing: -0.64px
+        background: linear-gradient(225.29deg, #101820 22.8%, #2C3642 99.5%)
+        -webkit-background-clip: text
+        -webkit-text-fill-color: transparent
+        background-clip: text
+        text-fill-color: transparent
+        position absolute
+
+      &:before
+        content: '«'  
+        top -15px
+        left -15px
+      &:after
+        content: '»'  
+        bottom -10px
+        right -15px
+
+    strong
+      font-size: 14px
+      color: #101820
+      font-weight: 600
+      line-height: 1
+      letter-spacing: 1.6px
+      text-transform: uppercase
+      display block
+      margin-bottom 5px
+
+    span
+      font-size: 14px
+      color: #101820
+      font-weight: 400
+      line-height: 1
+      letter-spacing: 0.16px
+      display block
 
 .other-news
   flex: 0 0 305px
   width: 305px
   max-width: 305px
   margin-right: 145px
+  transition: top .3s, ease .3s
 
   @media (max-width: 1279px)
     margin-right: 50px
 
-  @media (max-width: 767px)
+  /* @media (max-width: 767px)
     flex: 0 0 250px
     width: 250px
     max-width: 250px
-    margin-right: 25px
+    margin-right: 25px */
 
-  @media (max-width: 639px)
+  @media (max-width: 1023px)
     margin-bottom: 50px
     width: 100%
     max-width: 100%
@@ -89,10 +284,10 @@
     max-width: 280px
     margin-bottom: 35px
 
-    @media (max-width: 767px)
-      max-width: 230px
+    /* @media (max-width: 767px)
+      max-width: 230px */
 
-    @media (max-width: 639px)
+    @media (max-width: 1023px)
       max-width: 100%
       padding-right: 50px
 
@@ -117,3 +312,131 @@
 
     &:hover
       color: #101820
+
+.gallery
+  width: 100%
+  background-color: #F0F4FA
+  padding 30px 30px 15px 30px
+  margin-bottom 30px
+
+  .swiper
+    overflow: visible
+
+  .swiper-wrapper
+    overflow: hidden
+    padding-bottom 30px
+
+  .swiper-button-prev, .swiper-button-next
+    height: 20px
+
+    &:after
+      content: ''
+      width: 10px
+      height: 20px
+      background-repeat: no-repeat
+      background-position: 0 0
+      background-image: url("data:image/svg+xml,%3Csvg width='15' height='24' viewBox='0 0 15 24' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M13 2L3 12L13 22' stroke='%23101820' stroke-width='3'/%3E%3C/svg%3E%0A");
+      background-size: contain
+
+  .swiper-button-prev
+    left: -30px
+
+  .swiper-button-next
+    right: -30px
+
+    &:after
+      transform: rotate(180deg)
+
+  .swiper-pagination
+    bottom: 0
+    width: 100%
+    display: flex
+    justify-content: center
+    align-items: center
+    padding-right: 15px
+    padding-left: 15px
+
+    .swiper-pagination-bullet
+      background-color: transparent
+      border-radius: 4px
+      flex: 0 0 48px
+      width: 48px
+      max-width: 48px
+      margin-right: 4px
+      overflow: hidden
+      opacity: 1
+      padding-top: 15px
+      padding-bottom: 15px
+      position: relative
+
+      &:after
+        content: ''
+        position: absolute
+        top: 50%
+        left: 0
+        transform: translateY(-50%)
+        width: 100%
+        height: 3px
+        background-color: rgba(16, 24, 32, 0.2)
+
+      &:last-child
+        margin-right: 0
+
+      span
+        position: absolute
+        top: 50%
+        left: 0
+        transform: translateY(-50%)
+        display: block
+        width: 0
+        height: 3px
+        background-color: #101820
+
+      &.swiper-pagination-bullet-active
+        span
+          animation-name: paginationProgressBar
+          animation-duration: 5s
+          animation-timing-function: ease-in
+          animation-iteration-count: 1
+          animation-direction: alternate
+          animation-fill-mode: forwards
+
+  .swiper-slide
+    .slider-img
+      height: 484px
+      border-radius: 4px
+      overflow: hidden
+
+      @media (max-width: 767px)
+        height: 300px
+
+      img
+        width: 100%
+        height: 100%
+        vertical-align: top
+        object-fit: cover
+        object-position: center center
+
+    span
+      font-size: 12px
+      color: #101820
+      font-weight: 400
+      line-height: 15px
+      letter-spacing: 0.16px
+      display block
+      margin-top 15px    
+      opacity 0
+      visibility hidden
+      transition: opacity .3s, ease .3s
+
+    &.swiper-slide-active
+      span
+        opacity: 1
+        visibility: visible  
+
+  @keyframes paginationProgressBar
+    0%
+      width: 0
+
+    100%
+      width: 100%      
