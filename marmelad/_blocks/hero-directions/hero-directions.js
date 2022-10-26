@@ -1,30 +1,22 @@
-let flagShow = 0;
-$('.js-directions-list li a').on('mouseenter', function() {
-  const thisElem = $(this);
-  const getDataImg = thisElem.data('img');
-  const getDataBg = thisElem.data('bg');
-  const img = $('.js-directions-img').find('img');
+function directionsList() {
+  $('.js-directions-list li').each(function () {
+    const thisElem = $(this);
   
-  thisElem.parent().addClass('_is-active').siblings('li').removeClass('_is-active');
-  
-  
-  $('.js-directions-bg').css('background-image', `url(${getDataBg})`);
-
-  if (!thisElem.parent().hasClass('_is-current')) {
-    thisElem.parent().addClass('_is-current');
+    thisElem.on('mouseenter', function() {
+      const findLink = thisElem.find('a');
+      const imgsBg = $('.js-directions-bg').find('img');
+      const imgs = $('.js-directions-img').find('img');
+      
+      findLink.parent().addClass('_is-active').siblings('li').removeClass('_is-active');
+      imgsBg.removeClass('_is-show').eq($(this).index()).addClass('_is-show');
+      imgs.removeClass('_is-show').eq($(this).index()).addClass('_is-show');
     
-    img.fadeOut(0, function () {
-      $('.js-directions-img').removeClass('_is-active');
-      img.attr('src', getDataImg);
-      img.fadeIn(500);
-    });   
-    setTimeout(function() {
-      $('.js-directions-img').addClass('_is-active');
-      thisElem.parent().addClass('_is-current').siblings('li').removeClass('_is-current');
-    }, 200);
-  }
-}); 
-
+    }); 
+  });
+}
 if (window.matchMedia("(max-width: 1279px)").matches) {
   $('.js-directions-list li').removeClass('_is-active')
+}
+if ($('.js-directions-list').length && window.matchMedia("(min-width: 1280px)").matches) {
+  directionsList();
 }
