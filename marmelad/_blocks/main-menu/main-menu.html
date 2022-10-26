@@ -2,7 +2,7 @@
   <nav elem="nav">
     <ul>
       <li><a href="#">О компании</a></li>
-      <li><a href="#">Направления</a></li>
+      <li {% if pageTitle == "Направления" %}class="_is-active"{% endif %}><a href="#">Направления</a></li>
       <li {% if pageTitle == "Медиа" %}class="_is-active"{% endif %}><a href="#">Медиа</a></li>
       <li><a href="#">Инвесторам</a></li>
       <li><a href="#">Карьера</a></li>
