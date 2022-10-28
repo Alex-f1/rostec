@@ -20,17 +20,8 @@ function fixedNavDirection() {
       $('.inner-header').css('padding-top', getHeightNavDirection);
       $('.other-news').css('top', 120);
     }
-    /* else {
-      $('.nav-direction').removeClass('_is-fixed');
-      $('.inner-header').css('padding-top', 0)
-    } */
 
     this.oldScroll = newScroll;
-
-    /* if (newScroll >= oldScroll) {
-      $('.nav-direction').removeClass('_is-fixed');
-      $('.inner-header').css('padding-top', 0)
-    } */
 
     if (newScroll <= getPositionNavDirection) {
       $('.nav-direction').removeClass('_is-fixed');
