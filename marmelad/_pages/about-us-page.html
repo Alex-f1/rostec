@@ -1,0 +1,59 @@
+= yaml =
+pageTitle: О компании
+bodyClasses:
+layout: !!map
+  header: true
+  footer: true
+  left: false
+  right: false
+= yaml =
+
+{% extends 'app.html' %}
+
+
+{% block main %}
+
+  <div block="inner-header">
+    <div elem="section">
+      <div block="nav-direction" mods="long">
+        <div elem="section">
+          <div elem="panel">
+            <div elem="inner" class="contain">
+              <div block="direction-name" mods="news">
+                <div elem="section">
+                  <h3>О компании</h3>
+                </div>
+              </div><!-- direction-name -->
+              <nav elem="nav">
+                <ul>
+                  <li class="_is-active"><a href="#">История</a></li>
+                  <li><a href="#">Руководство</a></li>
+                  <li><a href="#">Стратегия</a></li>
+                  <li><a href="#">Инновации</a></li>
+                  <li><a href="#">Ключевые проекты</a></li>
+                  <li><a href="#">Отчетность</a></li>
+                  <li><a href="#">Закупки</a></li>
+                </ul>
+              </nav>
+            </div>
+          </div>
+        </div>
+      </div><!-- nav-direction -->
+    </div>
+  </div><!-- inner-header -->
+
+  {% include "about-us.html" %}
+
+  {% include "about-us-dates.html" %}
+
+  {% include "subscribe-news.html" %}
+
+{% endblock %}
+
+
+
+
+
+
+
+

@@ -5,6 +5,24 @@
   z-index: 5
   transition: transform 0.3s, background-color 0.3s, ease 0.3s
 
+  &--long
+    & ^[0]
+      &__nav
+        @media (min-width: 1280px)
+          position: absolute
+          top: -2px
+          right: 0
+
+        @media (min-width: 1440px)
+          padding-right: 25px
+
+        ul
+          li
+            margin-right: 45px
+
+            @media (max-width: 1439px)
+              margin-right: 25px
+
   &._is-fixed
     top: 0
     left: 0
