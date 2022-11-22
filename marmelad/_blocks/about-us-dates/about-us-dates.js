@@ -15,6 +15,7 @@ function initAboutUsSlider() {
     spaceBetween: 65,
     mousewheel: true,
     slideToClickedSlide: true,
+    threshold: 10,
     // autoplay: {
     //   delay: 5000,
     //   disableOnInteraction: false
