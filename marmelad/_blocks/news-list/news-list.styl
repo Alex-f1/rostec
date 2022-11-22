@@ -87,6 +87,7 @@
     display: flex
     align-items: center
     width: 100%
+    position: relative
 
     @media (max-width: 767px)
       flex-wrap: wrap
@@ -98,6 +99,11 @@
     @media (max-width: 767px)
       margin-right: 0
       margin-bottom: 15px
+
+  &__categories
+    & ^[0]
+      &__field
+        position: static
 
   &__field
     width: 100%
@@ -223,7 +229,8 @@
         background-image: url("data:image/svg+xml,%3Csvg width='24' height='24' viewBox='0 0 24 24' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M22 7L12 17L2 7' stroke='black' stroke-width='3'/%3E%3C/svg%3E%0A")
 
   &__categories-list
-    width: 268px
+    // width: 268px
+    width: 100%
     background-color: #fff
     position: absolute
     top: 100%
@@ -234,11 +241,11 @@
     z-index: 4
     transition: opacity 0.3s, transform 0.3s, ease 0.3s
 
-    @media (min-width: 768px) and (max-width: 1439px)
+    /* @media (min-width: 768px) and (max-width: 1439px)
       left: -75px
 
     @media (max-width: 767px)
-      width: 100%
+      width: 100% */
 
     &._is-show
       opacity: 1
@@ -249,6 +256,8 @@
       list-style: none
       padding-left: 0
       margin: 0
+      display: flex
+      flex-wrap: wrap
 
       li
         font-size: 20px
@@ -259,9 +268,19 @@
         display: flex
         align-items: center
         padding: 12px 10px
-        border-bottom: 1px solid rgba(183, 183, 183, 0.3)
+        // border-bottom: 1px solid rgba(183, 183, 183, 0.3)
+        width: 25%
         cursor: pointer
         transition: background 0.3s
+
+        @media (max-width: 959px)
+          width 33.333%
+
+        @media (max-width: 767px)
+          width 50%
+
+        @media (max-width: 639px)
+          width 100%
 
         @media (max-width: 374px)
           font-size: 16px
