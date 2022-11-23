@@ -1,0 +1,39 @@
+= yaml =
+pageTitle: Медиа
+bodyClasses:
+layout: !!map
+  header: true
+  footer: true
+  left: false
+  right: false
+= yaml =
+
+{% extends 'app.html' %}
+
+
+{% block main %}
+
+  <div block="inner-header">
+    <div elem="section">
+      <div block="search-panel" mods="page">
+        <div elem="form">
+          <div elem="fields">
+            <div elem="title">Поиск</div>
+            <div elem="field">
+              <div elem="input">
+                <input type="text" placeholder="Введите фразу для поиска" value="Авиация">
+              </div>
+              <button elem="button-submit" type="submit"></button>
+              <button elem="button-clear" type="reset"></button>
+            </div>
+          </div>
+        </div>
+      </div><!-- search-panel -->
+    </div>
+  </div><!-- inner-header -->
+
+  {% include "result-search.html" %}
+
+  {% include "subscribe-news.html" %}
+
+{% endblock %}
