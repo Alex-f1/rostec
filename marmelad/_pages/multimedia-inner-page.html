@@ -1,0 +1,89 @@
+= yaml =
+pageTitle: Медиа
+bodyClasses:
+layout: !!map
+  header: true
+  footer: true
+  left: false
+  right: false
+= yaml =
+
+{% extends 'app.html' %}
+
+
+{% block main %}
+
+  <div block="media-news-single" mods="media">
+    <div elem="body" class="contain">
+      <div elem="links">
+        <span>/ </span><a href="#">Новости</a><span> / </span>
+      </div>
+      <div elem="content">
+        <div elem="info">
+          <div elem="date">
+            <span>02.06</span>
+            <span>16:53</span>
+          </div>
+          <h2 elem="name">
+            Двигатели ОДК обеспечили успешный старт ракеты «Союз-2.1б»
+          </h2>
+          <div elem="tags">
+            <a elem="tag" href="#"># авиация</a>
+            <a elem="tag" href="#"># ОДК-Кузнецов</a>
+          </div>
+        </div>
+      </div>
+      <div class="gallery">
+        <div class="swiper js-gallery-content-slider">
+          <div class="swiper-wrapper spotlight-group" data-control="close,prev,next,fullscreen" data-fullscreen="false">
+            <div class="swiper-slide">
+              <div class="slider-img spotlight" data-src="img/gallery-img.jpg">
+                <img src="img/gallery-img.jpg" alt="">
+              </div>
+              <span>
+                «Представляемые «Рособоронэкспортом» образцы российского стрелкового оружия пользуются большой популярностью у
+                силовых
+                ведомств наших партнеров.
+              </span>
+            </div>
+            <div class="swiper-slide">
+              <div class="slider-img spotlight" data-src="img/gallery-img2.png">
+                <img src="img/gallery-img2.png" alt="">
+              </div>
+              <span>
+                «Представляемые «Рособоронэкспортом» образцы российского стрелкового оружия пользуются большой популярностью у
+                силовых
+                ведомств наших партнеров. 2
+              </span>
+            </div>
+            <div class="swiper-slide">
+              <div class="slider-img spotlight" data-src="img/plug-full-pic.jpg">
+                <img src="img/plug-full-pic.jpg" alt="">
+              </div>
+              <span>
+                «Представляемые «Рособоронэкспортом» образцы российского стрелкового оружия пользуются большой популярностью у
+                силовых
+                ведомств наших партнеров. 3
+              </span>
+            </div>
+            <div class="swiper-slide">
+              <div class="slider-img spotlight" data-src="img/plug-full-pic.jpg">
+                <img src="img/plug-full-pic.jpg" alt="">
+              </div>
+              <span>
+                «Представляемые «Рособоронэкспортом» образцы российского стрелкового оружия пользуются большой популярностью у
+                силовых
+                ведомств наших партнеров. 4
+              </span>
+            </div>
+          </div>
+          <div class="swiper-button-next"></div>
+          <div class="swiper-button-prev"></div>
+          <div class="swiper-pagination"></div>
+        </div>
+      </div>
+    </div>
+    <a elem="more" href="#">Показать больше</a>
+  </div><!-- media-news-single -->
+
+{% endblock %}

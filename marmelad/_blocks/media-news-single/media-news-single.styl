@@ -5,6 +5,47 @@
   @media (max-width: 959px)
     padding-top: 50px
 
+  &--media
+    & ^[0]
+      &__info
+        width: 100%
+
+    .gallery
+      max-width: 865px
+      margin-right: auto
+      margin-left: auto
+      margin: 35px auto 0 auto
+      background-color: #F5F8FA
+
+      @media (max-width: 767px)
+        margin-top: 20px
+
+      .swiper-slide
+        .slider-img
+          height: auto
+          border-radius: 4px
+          overflow: hidden
+          text-align: center
+          position: relative
+          cursor: pointer
+
+          @media (max-width: 767px)
+            height: auto
+
+          img
+            vertical-align: top
+            object-fit: contain
+            object-position: center center
+
+          &:after
+            content: ''
+            position: absolute
+            top: 8px
+            right: 8px
+            width: 24px
+            height: 24px
+            background-image: url("data:image/svg+xml,%3Csvg width='24' height='24' viewBox='0 0 24 24' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M5.5 11.5V18.5H12.5' stroke='white' stroke-width='3'/%3E%3Cpath d='M18.5 12.5L18.5 5.5L11.5 5.5' stroke='white' stroke-width='3'/%3E%3C/svg%3E%0A")
+
   &__links
     display: flex
     align-items: center
@@ -142,3 +183,32 @@
 
     &:last-child
       margin-right: 0
+
+  &__more
+    font-size: 20px
+    color: #A39061
+    font-weight: 600
+    line-height: 1.1
+    letter-spacing: 0.01em
+    text-align: center
+    text-decoration: none
+    width: 100%
+    margin-top: 95px
+    padding: 27px 20px
+    display: block
+    background-color: #fff
+    transition: color 0.3s, background-color 0.3s
+
+    @media (max-width: 1023px)
+      padding-top: 14px
+      padding-bottom: 14px
+
+    @media (max-width: 767px)
+      font-size: 16px
+      padding-top: 20px
+      padding-bottom: 20px
+      margin-top: 50px
+
+    &:hover
+      color: #fff
+      background-color: #A39061

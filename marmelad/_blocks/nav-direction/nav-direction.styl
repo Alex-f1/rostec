@@ -5,24 +5,23 @@
   z-index: 5
   transition: transform 0.3s, background-color 0.3s, ease 0.3s
 
-  &--long
-    & ^[0]
-      &__nav
-        @media (min-width: 1280px)
-          position: absolute
-          top: -2px
-          right: 0
+  // &--long
+  // & ^[0]
+  // &__nav
+  // @media (min-width: 1280px)
+  // position: absolute
+  // top: -2px
+  // right: 0
 
-        @media (min-width: 1440px)
-          padding-right: 25px
+  // @media (min-width: 1440px)
+  // padding-right: 25px
 
-        ul
-          li
-            margin-right: 45px
+  // ul
+  // li
+  // margin-right: 45px
 
-            @media (max-width: 1439px)
-              margin-right: 25px
-
+  // @media (max-width: 1439px)
+  // margin-right: 25px
   &._is-fixed
     top: 0
     left: 0
@@ -70,7 +69,12 @@
 
   &__nav
     margin-left: auto
-    overflow-x: auto
+    display: flex
+    width: 100%
+
+    // overflow-x: auto
+    @media (min-width: 768px)
+      margin-left: auto
 
     ul
       list-style: none
@@ -78,20 +82,25 @@
       align-items: center
       margin: 0
       padding-left: 0
+      width: 100%
+
+      @media (min-width: 768px)
+        justify-content: flex-end
 
       li
         margin-right: 50px
         flex: 0 0 auto
 
-        @media (max-width: 1279px)
-          margin-right: 25px
-
+        // @media (max-width: 1279px)
+        // margin-right: 25px
         @media (max-width: 767px)
           margin-right: 15px
 
         &:last-child
           margin-right: 0
 
+        // &:nth-last-child(2)
+        // margin-right: 30px
         &._is-active
           a
             color: #101820
@@ -118,6 +127,8 @@
           @media (max-width: 767px)
             padding-top: 20px
             padding-bottom: 20px
+            // padding-top: 30px
+            // padding-bottom: 30px
 
           &:after
             content: ''
@@ -133,3 +144,96 @@
 
           &:hover
             color: #101820
+
+  &__nav-last
+    position: relative
+    cursor: pointer
+    margin-right: 0 !important
+    padding: 16px
+    width: 89px
+    height: 46px
+    transition: background-color 0.3s
+    display: flex
+    align-items: center
+    justify-content: center
+    margin-left: -25px
+
+    @media (max-width: 767px)
+      margin-left: -15px
+
+    &:first-child
+      margin-left: 0
+      // ul
+      // left: 0 !important
+
+    &._is-active-last
+      background-color: #F5F8FA
+
+      &:before
+        color: #101820
+
+      &:after
+        background-image: url("data:image/svg+xml,%3Csvg width='12' height='8' viewBox='0 0 12 8' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M1 1L6 6L11 1' stroke='%23101820' stroke-width='2'/%3E%3C/svg%3E%0A")
+
+      ul
+        opacity: 1
+        visibility: visible
+
+    &:before
+      content: attr(data-text-nav-more)
+      font-size: 14px
+      color: #A39061
+      font-weight: 600
+      line-height: 14px
+      letter-spacing: 1.6px
+      text-transform: uppercase
+      width: 100%
+      transition: color 0.3s
+      display: block
+
+    &:after
+      content: ''
+      position: absolute
+      top: 18px
+      right: 16px
+      width: 12px
+      height: 8px
+      background-image: url("data:image/svg+xml,%3Csvg width='12' height='8' viewBox='0 0 12 8' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M1 1L6 6L11 1' stroke='%23A39061' stroke-width='2'/%3E%3C/svg%3E%0A")
+      background-repeat: no-repeat
+      background-position: 0 0
+      background-size: contain
+      transition: background 0.3s
+
+    ul
+      list-style: none
+      background-color: #fff
+      position: absolute
+      right: 0
+      top: 100%
+      max-width: 260px
+      width: auto !important
+      flex-direction: column
+      align-items: flex-start
+      border-radius: 0 0 4px 4px
+      z-index: 10
+      opacity: 0
+      visibility: hidden
+      transition: opacity 0.3s, ease 0.3s
+
+      li
+        margin-right: 0
+        flex: none
+        width: 100%
+        border-top: 1px solid rgba(143, 143, 140, 0.2)
+
+        &:first-child
+          border-top: 0
+
+        a
+          line-height: 1
+          display: block
+          padding: 16px !important
+          background-color: #F5F8FA
+
+          &:hover
+            border-color: transparent

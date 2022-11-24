@@ -28,6 +28,8 @@ function choiceDirection() {
     
           $('.js-choice-direction > span').html(joinDirection.toString());
           $('.js-choice-direction > span').attr('data-choice-directions', joinDirection);
+
+          $('.js-choice-direction').attr('data-all-direction', joinDirection);
     
           break;
         };
@@ -39,10 +41,12 @@ function choiceDirection() {
     
       $('.js-choice-direction > span').html(joinDirection.toString());
       $('.js-choice-direction > span').attr('data-choice-directions', joinDirection);
+      $('.js-choice-direction').attr('data-all-direction', joinDirection);
     }
     
     if ($('.js-choice-direction > span').html() == '') {
       $('.js-choice-direction > span').html(dataAllDirection);
+      $('.js-choice-direction').attr('data-all-direction', dataAllDirection);
     }
 
   });
