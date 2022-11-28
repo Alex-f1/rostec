@@ -43,7 +43,7 @@ function oneLineExtraMenu() {
   
   let getTextMoreMenu = $('.nav-direction').data('language-text');
   
-  const extraMenuList = $('.nav-direction').find('ul');
+  const extraMenuList = $('.nav-direction__nav').find('ul');
   extraMenuList.oneLineMenu({
     minWidth: 300,
     lastClass: 'nav-direction__nav-last',
