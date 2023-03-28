@@ -1,0 +1,24 @@
+= yaml =
+pageTitle: Главная
+bodyClasses:
+layout: !!map
+    header: true
+    footer: true
+    left: false
+    right: false
+= yaml =
+
+{% extends 'app.html' %}
+
+
+{% block main %}
+
+    {% include "new-hero.html" %}
+
+    {% include "main-news.html" %}
+
+    {% include "new-direction-activity.html" %}
+    
+    {% include "subscribe-news.html" %}
+
+{% endblock %}
