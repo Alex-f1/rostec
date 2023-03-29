@@ -12,6 +12,10 @@
   &--bottom-over
     margin-bottom: -460px
 
+    & ^[0]
+      &__bg-fill
+        display: block
+
   &__section
     width: 100%
     height: 100%
@@ -292,6 +296,7 @@
     opacity: 0.99
     backdrop-filter: blur(37px)
     z-index: 3
+    display: none
 
   @keyframes paginationProgressBar
     0%
