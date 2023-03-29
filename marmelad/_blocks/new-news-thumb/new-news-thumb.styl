@@ -1,0 +1,104 @@
+.new-news-thumb
+  width: 100%
+
+  &__body
+    width: 100%
+    display: flex
+    justify-content: space-between
+
+  &__info
+    display: flex
+    flex-direction: column
+    margin-right: 30px
+
+  &__date
+    font-size: 12px
+    color: #101820
+    font-weight: 600
+    line-height: 1.1
+    letter-spacing: 1.6px
+    text-transform: uppercase
+    margin-right: 32px
+    margin-bottom: 15px
+
+    @media (max-width: 639px)
+      margin-bottom: 8px
+
+  &__tags
+    display: flex
+    align-items: center
+    flex-wrap: wrap
+    margin-top: auto
+
+  &__tag
+    font-size: 12px
+    color: #101820
+    font-weight: 600
+    line-height: 1.1
+    letter-spacing: 1.6px
+    text-transform: uppercase
+    text-decoration: none
+    margin-right: 15px
+    margin-bottom: 15px
+    transition: color 0.3s
+
+    @media (max-width: 639px)
+      margin-bottom: 8px
+
+    &:hover
+      color: #a39061
+
+    &:last-child
+      margin-right: 0
+
+  &__img
+    display: block
+    overflow: hidden
+    flex: 0 0 304px
+    width: 304px
+    max-width: 304px
+    height: 277px
+    background-color: #101820
+
+    @media (max-width: 1279px)
+      flex: 0 0 184px
+      width: 184px
+      max-width: 184px
+      height: 168px
+
+    @media (max-width: 479px)
+      flex: 0 0 128px
+      width: 128px
+      max-width: 128px
+      height: 116px
+
+    &:hover
+      img
+        transform: scale(1.2)
+
+    img
+      width: 100%
+      height: 100%
+      vertical-align: top
+      object-fit: cover
+      transition: transform 1s, ease 1s
+
+  &__text
+    font-size: 22px
+    color: #000
+    font-weight: 400
+    line-height: 1.1
+    letter-spacing: 0.16px
+    text-decoration: none
+    transition: color 0.3s
+    margin-bottom: 16px
+    max-width: 416px
+
+    @media (max-width: 1279px)
+      font-size: 18px
+
+    @media (max-width: 479px)
+      font-size: 14px
+
+    &:hover
+      color: #a39061

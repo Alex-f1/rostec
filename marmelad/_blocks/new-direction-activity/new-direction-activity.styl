@@ -1,1 +1,559 @@
-.new-direction-activity {}
+.new-direction-activity
+  &__head
+    max-width: 1320px + 25px + 25px
+    width: 100%
+    padding-right: 25px
+    padding-left: 25px
+    margin-right: auto
+    margin-left: auto
+    display: flex
+    justify-content: space-between
+    margin-bottom: 35px
+
+    @media (max-width: 767px)
+      margin-bottom: 50px
+      display: block
+
+  &__title
+    font-size: 88px
+    color: #101820
+    font-weight: 600
+    line-height: 0.8
+    letter-spacing: -0.64
+    margin-top: 0
+    margin-bottom: 0
+
+    @media (max-width: 767px)
+      font-size: 56px
+      margin-bottom: 20px
+
+    @media (max-width: 479px)
+      font-size: 54px
+
+    @media (max-width: 374px)
+      font-size: 40px
+
+  &__all
+    font-size: 14px
+    color: #A39061
+    font-weight: 600
+    line-height: 1.1
+    letter-spacing: 1.6px
+    text-transform: uppercase
+    text-decoration: none
+    padding: 5px 0
+    align-self: flex-end
+    // border-bottom: 3px solid #A39061
+    transition: color 0.3s, border-color 0.3s
+
+    &:hover
+      color: #101820
+      border-bottom-color: #101820
+
+  &__inner
+    background-color: #FAFCFF
+
+  &__wrapper
+    display: flex
+    align-items: flex-start
+    position: relative
+    max-width: 1600px
+    width: 100%
+    margin-right: auto
+    margin-left: auto
+
+  &__preview
+    width: calc(50% + 102px)
+    height: 100vh
+    position: sticky
+    top: 0
+
+    @media (max-width: 1023px)
+      display: none
+
+    @media (min-height: 1200px)
+      height: 850px
+
+    .preview-news-direction
+      position: absolute
+      top: 0
+      left: 0
+      opacity: 0
+      visibility: hidden
+      transition: opacity 0.3s, ease 0.3s
+
+      &._is-show
+        opacity: 1
+        visibility: visible
+
+  &__list
+    flex: 1 1 auto
+
+    .preview-news-direction
+      height: 768px
+
+      @media (min-width: 1024px)
+        display: none
+
+      @media (max-width: 479px)
+        height: 376px
+
+  &__direction-head
+    width: 100%
+    // margin-bottom: 50px
+    position: sticky
+    top: 0
+    z-index: 5
+
+    @media (max-width: 1023px)
+      order: -2
+      margin-bottom: 20px
+
+  &__direction
+    padding-right: 33px
+    padding-left: 70px
+
+    @media (max-width: 1279px)
+      padding-right: 23px
+      padding-left: 48px
+
+    @media (max-width: 1023px)
+      padding-right: 0
+      padding-left: 0
+
+    &:last-child
+      & ^[0]
+        &__direction-inner
+          border-bottom: none
+
+  &__direction-inner
+    @media (max-width: 1023px)
+      padding: 44px 25px 32px 25px
+
+  &__container
+    position: relative
+
+  &__more
+    font-size: 20px
+    color: #A39061
+    font-weight: 600
+    line-height: 1.1
+    letter-spacing: 0.01em
+    text-align: center
+    text-decoration: none
+    width: 100%
+    // margin-top: 30px
+    padding: 25px 20px
+    display: block
+    background-color: #F0F4FA
+    transition: color 0.3s, background-color 0.3s
+
+    @media (max-width: 1023px)
+      margin-bottom: 30px
+      padding-top: 14px
+      padding-bottom: 14px
+
+    @media (max-width: 767px)
+      margin-bottom: 0
+      font-size: 16px
+      padding-top: 20px
+      padding-bottom: 20px
+
+    &:hover
+      color: #fff
+      background-color: #A39061
+
+.new-direction-name
+  padding-top: 18px
+  padding-bottom: 18px
+  padding-left: 70px
+  width: 100%
+  transition: background-color 0.3s, ease 0.3s
+  cursor: pointer
+
+  @media (max-width: 1279px)
+    padding-left: 36px
+
+  &:hover
+    background-color: #fff
+
+  &._is-fixed
+    background-color: #fff
+
+  &__section
+    display: flex
+    align-items: center
+
+  h3
+    font-size: 32px
+    color: #101820
+    font-weight: 600
+    line-height: 1.1
+    letter-spacing: 0.16px
+    margin-top: 0
+    margin-bottom: 0
+    transition: color 0.3s
+
+  &__other
+    flex: 0 0 20px
+    max-width: 20px
+    width: 15px
+    height: 22px
+    background-image: url("data:image/svg+xml,%3Csvg width='15' height='22' viewBox='0 0 15 22' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M1.5 8.65223L7.5 2.39136L13.5 8.65223' stroke='%23101820' stroke-width='2.6087'/%3E%3Cpath d='M1.5 13.8696L7.5 19.6088L13.5 13.8696' stroke='%23101820' stroke-width='2.6087'/%3E%3C/svg%3E%0A")
+    background-repeat: no-repeat
+    background-position: 0 0
+    background-size: contain
+    margin-right: 20px
+    margin-left: -40px
+    transition: background 0.3s
+
+    @media (max-width: 1279px)
+      margin-right: 10px
+      margin-left: -20px
+
+    @media (max-width: 767px)
+      flex: 16px
+      max-width: 16px
+      width: 16px
+      height: 22px
+      margin-right: 12px
+
+    &:hover
+      background-image: url("data:image/svg+xml,%3Csvg width='15' height='22' viewBox='0 0 15 22' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M1.5 8.65223L7.5 2.39136L13.5 8.65223' stroke='%23A39061' stroke-width='2.6087'/%3E%3Cpath d='M1.5 13.8696L7.5 19.6088L13.5 13.8696' stroke='%23A39061' stroke-width='2.6087'/%3E%3C/svg%3E%0A")
+
+  &__list
+    position: absolute
+    top: 100px
+    left: 0
+    width: 100%
+    background-color: #F0F4FA
+    opacity: 0
+    visibility: hidden
+    transform: translateY(-30px)
+    transition: opacity 0.3s, transform 0.3s, ease 0.3s
+
+    &._is-show
+      opacity: 1
+      visibility: visible
+      transition: translateY(0)
+
+    ul
+      list-style: none
+      margin: 0
+      padding-left: 0
+
+      li
+        position: relative
+        transition: background-color 0.3s
+
+        &._is-active
+          pointer-events: none
+
+          a
+            pointer-events: none
+
+            span
+              &:before
+                opacity: 1
+                visibility: visible
+
+        &:hover
+          background-color: #101820
+
+          img
+            opacity: 1
+            visibility: visible
+
+          &:before
+            opacity: 1
+            visibility: visible
+
+        &:before
+          content: ''
+          position: absolute
+          top: 0
+          left: 0
+          width: 100%
+          height: 100%
+          background-color: rgba(16, 24, 32, 0.6)
+          z-index: 2
+          opacity: 0
+          visibility: hidden
+          transition: opacity 0.3s, ease 0.3s
+
+        img
+          position: absolute
+          top: 0
+          left: 0
+          width: 100%
+          height: 100%
+          z-index: 1
+          vertical-align: top
+          object-fit: cover
+          object-position: 50% 32%
+          opacity: 0
+          visibility: hidden
+          transition: opacity 0.3s, ease 0.3s
+
+        a
+          font-size: 32px
+          color: #101820
+          font-weight: 600
+          line-height: 1
+          letter-spacing: 0.16px
+          text-decoration: none
+          padding-top: 30px
+          padding-bottom: 30px
+          padding-left: 45px
+          transition: color 0.3s, background-color 0.3s
+          display: block
+          position: relative
+          z-index: 3
+
+          @media (max-height: 700px)
+            padding-top: 15px
+            padding-bottom: 15px
+
+          @media (max-width: 1023px)
+            padding-left: 25px
+
+          @media (max-width: 767px)
+            padding-top: 15px
+            padding-bottom: 15px
+
+          &:after
+            content: ''
+            position: absolute
+            top: 50%
+            right: 35px
+            transform: translateY(-50%)
+            width: 26px
+            height: 26px
+            background-image: url("data:image/svg+xml,%3Csvg width='26' height='26' viewBox='0 0 26 26' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M23.668 13.7051L11.668 1.70508' stroke='white' stroke-width='4'/%3E%3Cpath d='M11.668 24.3325L23.668 12.3325' stroke='white' stroke-width='4'/%3E%3C/svg%3E%0A")
+            background-repeat: no-repeat
+            background-position: 0 0
+            background-size: contain
+            opacity: 0
+            visibility: hidden
+            transition: opacity 0.3s, ease 0.3s
+
+          &:hover
+            color: #fff
+
+            &:after
+              opacity: 1
+              visibility: visible
+
+          span
+            padding-left: 25px
+            display: block
+            position: relative
+
+            &:before
+              content: ''
+              position: absolute
+              top: 50%
+              left: -15px
+              transform: translateY(-50%)
+              background-image: url("data:image/svg+xml,%3Csvg width='25' height='17' viewBox='0 0 25 17' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M2 6.50012L10.4483 14.5001L23.8965 1.50012' stroke='%23101820' stroke-width='3'/%3E%3C/svg%3E%0A")
+              width: 20px
+              height: 12px
+              background-repeat: no-repeat
+              background-position: 0 0
+              background-size: contain
+              opacity: 0
+              visibility: hidden
+              transition: opacity 0.3s, ease 0.3s
+
+              @media (max-width: 1023px)
+                left: -10px
+
+.preview-news-direction
+  width: 100%
+  height: 100%
+  background-color: #101820
+
+  &__body
+    width: 100%
+    height: 100%
+    position: relative
+
+  &__img
+    width: 100%
+    height: 100%
+    position: relative
+
+    img
+      vertical-align: top
+      width: 100%
+      height: 100%
+      object-fit: cover
+
+    &:before
+      content: ''
+      position: absolute
+      top: 0
+      left: 0
+      width: 100%
+      height: 100%
+      background: linear-gradient(0deg, rgba(16, 24, 32, 0.4), rgba(16, 24, 32, 0.4)), url('image.png')
+
+  &__content
+    width: 100%
+    height: 358px
+    position: absolute
+    bottom: 0
+    left: 0
+    background: rgba(16, 24, 32, 0.01)
+    opacity: 0.99
+    backdrop-filter: blur(37px)
+    padding: 32px
+    display: flex
+    flex-direction: column
+    justify-content: center
+
+    @media (max-width: 1279px)
+      height: 357px
+
+    @media (max-width: 1023px)
+      padding: 25px
+      justify-content: flex-start
+      height: 256px
+
+    @media (max-width: 479px)
+      height: 174px
+
+  &__info
+    max-width: 525px
+    width: 100%
+    margin-right: auto
+    margin-left: auto
+    padding-left: 50px
+    display: flex
+    flex-direction: column
+
+    @media (max-width: 1279px)
+      max-width: 100%
+      padding-left: 0
+
+  &__date
+    font-size: 12px
+    color: rgba(240, 244, 250, 0.6)
+    font-weight: 600
+    line-height: 1.1
+    letter-spacing: 1.6px
+    text-transform: uppercase
+    margin-right: 32px
+    margin-bottom: 15px
+
+  &__tags
+    display: flex
+    align-items: center
+    flex-wrap: wrap
+    margin-top: auto
+
+  &__tag
+    font-size: 12px
+    color: rgba(240, 244, 250, 0.6)
+    font-weight: 600
+    line-height: 1.1
+    letter-spacing: 1.6px
+    text-transform: uppercase
+    text-decoration: none
+    margin-right: 15px
+    margin-bottom: 15px
+    transition: color 0.3s
+    display: flex
+    align-items: center
+    flex-wrap: wrap
+
+    &:hover
+      color: #a39061
+
+    &:last-child
+      margin-right: 0
+
+    span
+      position: relative
+      margin-right: 8px
+      padding-right: 11px
+
+      &:after
+        content: ''
+        position: absolute
+        top: 5px
+        right: 0
+        width: 3px
+        height: 3px
+        border-radius: 50%
+        background-color: #8F8F8C
+        opacity: 0.5
+
+      &:last-child
+        margin-right: 0
+
+        &:after
+          display: none
+
+  &__text
+    font-size: 32px
+    color: rgba(240, 244, 250, 0.6)
+    font-weight: 400
+    line-height: 1.1
+    letter-spacing: 0.16px
+    text-decoration: none
+    transition: color 0.3s
+    margin-bottom: 56px
+
+    @media (max-width: 1023px)
+      font-size: 18px
+
+    @media (max-width: 479px)
+      font-size: 14px
+
+    &:hover
+      color: #a39061
+
+  &__more
+    position: absolute
+    bottom: 48px
+    right: 48px
+    width: 48px
+    height: 48px
+    background-image: url("data:image/svg+xml,%3Csvg width='48' height='48' viewBox='0 0 48 48' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M8.5 24H40.5' stroke='white' stroke-width='3'/%3E%3Cpath d='M24.5 8L24.5 40' stroke='white' stroke-width='3'/%3E%3C/svg%3E%0A")
+    background-repeat: no-repeat
+    background-position: 50% 50%
+    background-size: 48px 48px
+    z-index: 2
+    transition: background 0.3s, ease 0.3s
+
+    @media (max-width: 1279px)
+      bottom: 16px
+      right: 16px
+
+    @media (max-width: 767px)
+      bottom: 8px
+      right: 8px
+
+    &:after
+      content: ''
+      position: absolute
+      bottom: 6px
+      right: 6px
+      width: 34px
+      height: 34px
+      background-size: 34px 34px
+      background-image: url("data:image/svg+xml,%3Csvg width='34' height='34' viewBox='0 0 34 34' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M32.0659 17.9402L15.7426 1.61694' stroke='%23A39061' stroke-width='3'/%3E%3Cpath d='M15.7419 32.3965L32.0652 16.0732' stroke='%23A39061' stroke-width='3'/%3E%3C/svg%3E%0A")
+      background-repeat: no-repeat
+      background-position: 0 0
+      opacity: 0
+      visibility: hidden
+      transition: opacity 0.3s, left 0.3s, ease 0.3s
+
+    &:hover
+      background-image: none
+
+      &:after
+        opacity: 1
+        left: 10px
+        visibility: visible
