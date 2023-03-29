@@ -51,8 +51,12 @@ function newDirectionName() {
 
           let getThisText = positions[i].a.find('span').text();
           $('.new-direction-name h3').html(getThisText);
-          $('.preview-news-direction').eq(positions[i].a.closest('li').index())
-            .addClass('_is-show').siblings().removeClass('_is-show')
+          
+          if (window.matchMedia("(min-width: 1024px)").matches) {
+            $('.preview-news-direction').eq(positions[i].a.closest('li').index())
+              .addClass('_is-show').siblings().removeClass('_is-show')
+          }
+          
         }
         break;
       }
