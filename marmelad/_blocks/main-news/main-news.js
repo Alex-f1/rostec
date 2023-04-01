@@ -1,8 +1,11 @@
 function initMainNewsSlider() {
+  var slidesOffsetAfter = $('.main-news--extra').length ? 30 : 0;
+
   var mainNewsSlider = new Swiper(".js-main-news-slider", {
     slidesPerView: "auto",
     spaceBetween: 30,
     speed: 1000,
+    slidesOffsetAfter: slidesOffsetAfter,
     autoplay: {
       delay: 5000,
       disableOnInteraction: false
@@ -25,7 +28,7 @@ function initMainNewsSlider() {
       },
       375: {
         centeredSlides: false,
-        spaceBetween: 15
+        spaceBetween: 30
       },
       768: {
         centeredSlides: false,

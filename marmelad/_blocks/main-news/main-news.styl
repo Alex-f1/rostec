@@ -9,6 +9,57 @@
         opacity: 0
         visibility: hidden
 
+  &--extra
+    & ^[0]
+      &__container
+        display: flex
+
+        > .main-news__item
+          @media (min-width: 768px)
+            display: block
+
+      &__wrapper
+        max-width: none
+        width: 100%
+        margin-left: 0
+        margin-right: 0
+        padding-right: 0
+        padding-left: 0
+
+        .swiper-button-prev
+          left: 5px
+
+          &:after
+            width: 20px
+            height: 20px
+            background-size: contain;
+
+        .swiper-button-next
+          right: 95px
+
+          &:after
+            width: 20px
+            height: 20px
+            background-size: contain;
+
+      &__slider
+        overflow: hidden
+
+        @media (min-width: 768px)
+          margin-left: 30px
+
+        .swiper-pagination
+          @media (min-width: 768px)
+            justify-content: flex-start
+            padding-left: 155px
+
+      &__items
+        & ^[0]
+          &__item
+            &:first-child
+              @media (min-width: 768px)
+                display: none
+
   &__section
     width: 100%
     overflow: hidden
@@ -103,12 +154,12 @@
     text-transform: uppercase
     text-decoration: none
     padding: 5px 0
-    border-bottom: 3px solid #FFFFFF
+    // border-bottom: 3px solid #FFFFFF
     transition: color 0.3s, border-color 0.3s, opacity 0.3s
 
     &:hover
       color: #a39061
-      border-bottom-color: #A39061
+      // border-bottom-color: #A39061
 
     @media (max-width: 767px)
       font-size: 0
@@ -121,9 +172,34 @@
       background-repeat: no-repeat
       background-position: 0 0
 
-  &__slider
-    padding-bottom: 50px
-    overflow: visible
+  &__container
+    display: flex
+
+    > .main-news__item
+      flex: 0 0 305px
+      width: 305px
+      max-width: 305px
+      margin-right: 32px
+      position: relative
+      display: none
+
+      &:after
+        content: ''
+        position: absolute
+        top: 0
+        right: -32px
+        width: 1px
+        height: 100%
+        background-color: rgba(255, 255, 255, 0.2)
+
+  &__wrapper
+    max-width: 1320px + 25px + 25px
+    width: 100%
+    margin-left: auto
+    margin-right: auto
+    padding-right: 25px
+    padding-left: 25px
+    position: relative
 
     &:hover
       .swiper-button-prev, .swiper-button-next
@@ -166,6 +242,10 @@
       &:after
         transform: rotate(180deg)
 
+  &__slider
+    padding-bottom: 50px
+    overflow: visible
+
     .swiper-pagination
       bottom: 0
       width: 100%
@@ -174,6 +254,9 @@
       align-items: center
       padding-right: 15px
       padding-left: 15px
+
+      @media (max-width: 413px)
+        padding-left: 0
 
     .swiper-pagination-bullet
       background-color: transparent
@@ -225,6 +308,13 @@
 
     @media (max-width: 374px)
       width: 280px
+
+    @media (min-width: 375px) and (max-width: 767px)
+      width: 330px
+
+    .main-news-thumb
+      @media (min-width: 375px) and (max-width: 767px)
+        max-width: 100%
 
   @keyframes paginationProgressBar
     0%

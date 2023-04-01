@@ -26,6 +26,17 @@ if (window.NodeList && !NodeList.prototype.forEach) {
  * ========================================================================== */
 $(function() {
   //=require ../_blocks/**/*.js
+  
+  if ($('.main-news--extra').length) {
+    $(window).on('load resize', function () {
+      const mainNewsContainer = $('.main-news__container');
+      let mainNewsInnerOffSetLeft = $('.main-news__inner').offset().left + 20;
+
+      mainNewsContainer.css('margin-left', mainNewsInnerOffSetLeft);
+
+    });
+  }
+  
 
   $('.js-go-to-top').on('click', function() {
     $('html, body').stop().animate({ scrollTop: 0 }, 1000, 'swing');
