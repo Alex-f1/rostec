@@ -195,6 +195,98 @@ layout: !!map
 
     {% include "new-direction-activity.html" %}
     
-    {% include "subscribe-news.html" %}
+    <div block="subscribe-news" mods="social">
+        <div elem="section">
+            <div elem="inner" class="contain">
+                <div elem="wrapper">
+                    <div elem="head">
+                        <div elem="title">На связи в <br> соцсетях</div>
+                        <div elem="links">
+                            <a href="#"><span>VK</span></a>
+                            <a href="#"><span>Rutube</span></a>
+                            <a href="#">
+                                <svg width="14" height="14" viewBox="0 0 14 14" fill="none"
+                                    xmlns="http://www.w3.org/2000/svg">
+                                    <g clip-path="url(#clip0_3004_6618)">
+                                        <circle cx="1" cy="10" r="1" fill="#A39061" />
+                                        <path
+                                            d="M-3.98807e-09 6C0.656609 6 1.30679 6.12933 1.91342 6.3806C2.52005 6.63188 3.07124 7.00017 3.53553 7.46447C3.99983 7.92876 4.36812 8.47996 4.6194 9.08658C4.87067 9.69321 5 10.3434 5 11"
+                                            stroke="#A39061" stroke-width="2" />
+                                        <path
+                                            d="M-8.30516e-07 2C1.1819 2 2.35222 2.23279 3.44415 2.68508C4.53608 3.13738 5.52823 3.80031 6.36396 4.63604C7.19969 5.47177 7.86262 6.46392 8.31492 7.55585C8.76721 8.64778 9 9.8181 9 11"
+                                            stroke="#A39061" stroke-width="2" />
+                                    </g>
+                                    <defs>
+                                        <clipPath id="clip0_3004_6618">
+                                            <rect width="14" height="14" fill="white" />
+                                        </clipPath>
+                                    </defs>
+                                </svg>
+    
+                                <span>RSS</span>
+                            </a>
+                        </div>
+                    </div>
+                    <div elem="head">
+                        <div elem="title">Подписаться <br> на новости</div>
+                        <div elem="desc">
+                            Актуальная информация от лидеров промышленности России
+                        </div>
+                    </div>
+                    <form elem="form">
+                        <div elem="fields">
+                            <div elem="field">
+                                <div elem="choice-direction" class="js-choice-direction"
+                                    data-all-direction="Новости всех направлений">
+                                    <span data-choice-directions="Новости всех направлений">
+                                        Новости всех направлений
+                                    </span>
+                                    <i></i>
+                                </div>
+                                <div elem="directions" class="js-subscribe-directions">
+                                    <ul>
+                                        <li class="js-subscribe-direction" data-direction="Авиация">
+                                            <span>Авиация</span>
+                                        </li>
+                                        <li class="js-subscribe-direction" data-direction="Транспорт">
+                                            <span>Транспорт</span>
+                                        </li>
+                                        <li class="js-subscribe-direction" data-direction="ИТ и Телеком">
+                                            <span>ИТ и Телеком</span>
+                                        </li>
+                                        <li class="js-subscribe-direction" data-direction="Здравоохранение">
+                                            <span>Здравоохранение</span>
+                                        </li>
+                                        <li class="js-subscribe-direction" data-direction="Экология">
+                                            <span>Экология</span>
+                                        </li>
+                                        <li class="js-subscribe-direction" data-direction="HR">
+                                            <span>HR</span>
+                                        </li>
+                                    </ul>
+                                </div>
+                            </div>
+                            <div elem="field">
+                                <div elem="input">
+                                    <input type="email" placeholder="Введите ваш email">
+                                    <button elem="button-submit" type="submit"></button>
+                                </div>
+                                <span elem="text-error">Текст ошибки</span>
+                                <span elem="note">Без спама, один раз в неделю, только самое интересное</span>
+                            </div>
+                        </div>
+                        <div elem="success">
+                            <i elem="icon-success"></i>
+                            <span>
+                                Спасибо! Мы сохарнили вашу электронную почту и будем присылать самые актуальные новости по
+                                вашим
+                                предпочтениям
+                            </span>
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div><!-- subscribe-news -->
 
 {% endblock %}
