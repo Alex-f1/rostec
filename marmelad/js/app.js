@@ -28,12 +28,15 @@ $(function() {
   //=require ../_blocks/**/*.js
   
   if ($('.main-news--extra').length) {
-    $(window).on('load resize', function () {
+    function containerMargin() {
       const mainNewsContainer = $('.main-news__container');
       let mainNewsInnerOffSetLeft = $('.main-news__inner').offset().left + 20;
-
+  
       mainNewsContainer.css('margin-left', mainNewsInnerOffSetLeft);
-
+    }
+    containerMargin();
+    $(window).on('load resize', function () {
+      containerMargin();
     });
   }
   
